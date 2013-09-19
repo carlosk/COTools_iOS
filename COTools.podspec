@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "COTool"
+  s.name         = "COTools"
   s.version      = "0.0.1"
   s.summary      = "Sumi Interactive make a new CoreData and iCloud a Third-party library on MagicalRecord."
   s.homepage     = "http://www.carloschen.cn"
