@@ -15,4 +15,11 @@
 +(void)putValue:(NSString *) value key:(NSString *)key;
 //删除一个数据
 +(void)deleteByKey:(NSString *)key;
+
+/**
+ *  获取uuid
+ *
+ *  @return 返回的是uuid的字符串
+ */
++ (NSString *)uuid;
 @end

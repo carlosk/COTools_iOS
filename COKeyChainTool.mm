@@ -57,4 +57,25 @@
     SecItemDelete((CFDictionaryRef)keychainQuery);
 }
 
+#define kUUIDKey @"kUUIDKey"
+//获取uuid
++(NSString *)uuid{
+    NSString *uuid = [COKeyChainTool valueByKey:kUUIDKey];
+    
+    if (!uuid || [@"" isEqual:uuid]) {
+        // Create universally unique identifier (object)
+        CFUUIDRef uuidObject = CFUUIDCreate(kCFAllocatorDefault);
+        
+        // Get the string representation of CFUUID object.
+        uuid = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidObject);
+        //移除-号
+        uuid = [uuid stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        //        CFUUIDBytes bytes = CFUUIDGetUUIDBytes(uuidObject);
+        CFRelease(uuidObject);
+        [COKeyChainTool putValue:uuid key:kUUIDKey];
+    }
+    return uuid;
+}
+
+
 @end
