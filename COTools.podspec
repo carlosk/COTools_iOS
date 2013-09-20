@@ -9,5 +9,4 @@ Pod::Spec.new do |s|
   s.source_files = '*.{h,m,mm}'
   s.requires_arc = true
   s.platform     = :ios
-  s.framework    = 'Security'
 end
