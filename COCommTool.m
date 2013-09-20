@@ -16,7 +16,9 @@
  *  @param json   json的字典
  */
 + (void)fillObject:(id )object withJSONDict:(NSDictionary *)json{
-    
+    if (!object || ![json isKindOfClass:[NSDictionary class]]) {
+        return;
+    }
     Class mClass1 = [object class];
     unsigned int outCount, i;
     objc_property_t *properties = class_copyPropertyList(mClass1, &outCount);
@@ -25,7 +27,7 @@
         NSString *key = [NSString stringWithFormat:@"%s",property_getName(property)];
         id value = [json objectForKey:key];
         if (value) {
-            [self setValue:value forKey:key];
+            [object setValue:value forKey:key];
         }
     }
     free (properties);
