@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 carlosk. All rights reserved.
 //
 
-#import "COKeyChainHandler.h"
+#import "COKeyChainTool.h"
 #import <Security/Security.h>
-@implementation COKeyChainHandler
+@implementation COKeyChainTool
 //根据key获取一个数据
 +(NSString *)valueByKey:(NSString *)key{
     NSString* ret = nil;

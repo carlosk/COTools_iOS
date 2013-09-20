@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface COKeyChainHandler : NSObject
+@interface COKeyChainTool : NSObject
 //根据key获取一个数据
 +(NSString *)valueByKey:(NSString *)key;
 //添加或更新一个数据
