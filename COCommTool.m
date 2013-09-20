@@ -7,7 +7,7 @@
 //
 
 #import "COCommTool.h"
-@import ObjectiveC.runtime;
+#import <objc/runtime.h>
 @implementation COCommTool
 /**
  *  json字典填充一个Object对象
