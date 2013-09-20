@@ -11,6 +11,7 @@
 #import "COAppTool.h"
 #import "COCrashTool.h"
 #import "COLogTool.h"
+#import "COCommTool.h"
 @interface COTools : NSObject
 
 @end
