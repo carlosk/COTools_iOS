@@ -28,7 +28,7 @@
 }
 
 //获取系统Version
-+ (float )mSystemVersion{
++ (float )osVersion{
     return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
@@ -41,5 +41,48 @@
 
     return [NSString stringWithFormat:@"https://itunes.apple.com/us/app/zhang-shang-wen-zhou/id%@?ls=1&mt=8",appId];
 }
+
+static const char * __jb_app = NULL;
+
++ (BOOL)isJailBroken
+{
+	static const char * __jb_apps[] =
+	{
+		"/Application/Cydia.app",
+		"/Application/limera1n.app",
+		"/Application/greenpois0n.app",
+		"/Application/blackra1n.app",
+		"/Application/blacksn0w.app",
+		"/Application/redsn0w.app",
+		NULL
+	};
+    
+	__jb_app = NULL;
+    
+	// method 1
+    for ( int i = 0; __jb_apps[i]; ++i )
+    {
+        if ( [[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithUTF8String:__jb_apps[i]]] )
+        {
+			__jb_app = __jb_apps[i];
+			return YES;
+        }
+    }
+	
+    // method 2
+	if ( [[NSFileManager defaultManager] fileExistsAtPath:@"/private/var/lib/apt/"] )
+	{
+		return YES;
+	}
+	
+	// method 3
+	if ( 0 == system("ls") )
+	{
+		return YES;
+	}
+	
+    return NO;
+}
+
 
 @end

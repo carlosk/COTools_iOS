@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = {"carlos" => "carlosk@163.com" }
   s.source       = { :git => "https://github.com/carlosk/COTools"}
-  s.source_files = '*.{h,m,mm}'
+  s.source_files = '*.{h,m,mm}','**/*.{h,m,mm}'
   s.requires_arc = true
   s.platform     = :ios
 end
