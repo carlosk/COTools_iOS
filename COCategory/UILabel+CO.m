@@ -12,7 +12,7 @@
 //根据文字内容设置高度
 - (void)setAutoHeightWithContent{
     float height = [self sizeWithContent];
-    [self setH:height];
+    self.height=height;
 }
 
 //根据内容和宽度获取高度
