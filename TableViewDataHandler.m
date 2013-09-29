@@ -22,10 +22,10 @@
 @implementation TableViewDataHandler
 
 //根据setion初始化
--(TableViewDataHandler *)initWithSetions:(NSArray *)setions withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
+-(TableViewDataHandler *)initWithSetions:(NSMutableArray *)setions withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
     self = [super init];
     if (self) {
-        self.sections = [NSMutableArray arrayWithArray:setions];
+        self.sections = setions;
         self.tableViewDataHandlerFillCellBlock = tableViewDataHandlerFillCellBlock;
         self.mTableV = tableV;
         tableV.delegate = self;
@@ -39,14 +39,13 @@
         
     }
     return self;
-
     
 }
 //初始化
--(TableViewDataHandler *)initWithItems:(NSArray *)items withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
+-(TableViewDataHandler *)initWithItems:(NSMutableArray *)items withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
     self = [super init];
     if (self) {
-        self.items = [NSMutableArray arrayWithArray:items];
+        self.items = items;
         self.tableViewDataHandlerFillCellBlock = tableViewDataHandlerFillCellBlock;
         self.mTableV = tableV;
         tableV.delegate = self;
@@ -74,9 +73,8 @@
 }
 
 //重新刷新
--(void)reload:(NSArray *)items{
-    [self.items removeAllObjects];
-    [self.items addObjectsFromArray:items];
+-(void)reloadItemsData:(NSMutableArray *)items{
+    self.items = items;
     [self.mTableV reloadData];
 }
 #pragma mark UITableViewDataSource

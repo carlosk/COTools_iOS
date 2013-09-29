@@ -18,4 +18,10 @@
 - (void)fillWithItems:(NSArray *)items withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
 //添加点击的block
 - (void)setOnClickCellBlock:(TableViewDataHandlerClickIndexBlock )block;
+/**
+ *  没有section的情况下用的
+ *
+ *  @param items
+ */
+- (void)reloadItemsData:(NSMutableArray *)items;
 @end

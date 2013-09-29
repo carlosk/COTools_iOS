@@ -41,4 +41,12 @@ static char tableViewDataHandlerKey ;
 - (void)setOnClickCellBlock:(TableViewDataHandlerClickIndexBlock )block{
     [self.handler setTableViewDataHandlerClickIndexBlock:block];
 }
+
+/**
+ *  没有section的情况下用的
+ *  @param items
+ */
+- (void)reloadItemsData:(NSMutableArray *)items{
+    [self.handler reloadItemsData:items];
+}
 @end

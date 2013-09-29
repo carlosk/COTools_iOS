@@ -21,5 +21,5 @@ typedef void(^TableViewDataHandlerClickIndexBlock)(NSIndexPath *indexPath,id ite
 //获取一个item
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
 //重新刷新
--(void)reload:(NSArray *)items;
+-(void)reloadItemsData:(NSArray *)items;
 @end
