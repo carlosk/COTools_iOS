@@ -16,4 +16,6 @@
 
 //填充数据到TableView里,默认章节是1
 - (void)fillWithItems:(NSArray *)items withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
+//添加点击的block
+- (void)setOnClickCellBlock:(TableViewDataHandlerClickIndexBlock )block;
 @end

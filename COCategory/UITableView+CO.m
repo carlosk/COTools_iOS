@@ -36,4 +36,9 @@ static char tableViewDataHandlerKey ;
     self.handler = handler;
     
 }
+
+//添加点击的block
+- (void)setOnClickCellBlock:(TableViewDataHandlerClickIndexBlock )block{
+    [self.handler setTableViewDataHandlerClickIndexBlock:block];
+}
 @end
