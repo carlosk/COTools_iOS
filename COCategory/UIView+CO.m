@@ -7,8 +7,10 @@
 //
 
 #import "UIView+CO.h"
+#import <objc/runtime.h>
 
 @implementation UIView (CO)
+
 //根据Xib文件创建View
 +(id) createWithXib:(NSString *)xibName;
 {

@@ -14,4 +14,11 @@
 
 //根据内容和宽度获取高度
 -(float )sizeWithContent;
+
+/**
+ *  设置自定义的字体名
+ *
+ *  @param fontName
+ */
++ (void)setCustomFontName:(NSString *)fontName;
 @end

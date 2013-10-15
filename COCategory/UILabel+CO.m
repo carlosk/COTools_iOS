@@ -8,7 +8,50 @@
 
 #import "UILabel+CO.h"
 #import "UIView+CO.h"
+#import <objc/runtime.h>
 @implementation UILabel (CO)
+
++ (void)load{
+    //定制字体
+    [self customLoadFont];
+}
+
+static NSString *myCustomFontName;
+/**
+ *  在load的时候加入
+ */
++ (void)customLoadFont{
+    SEL originSEL = @selector(setFont:);
+    SEL nowSEL = @selector(customSetFont:);
+    Method originMethod = class_getInstanceMethod([self class], originSEL);
+    IMP originIMP = class_getMethodImplementation([self class], originSEL);
+    Method nowMethod = class_getInstanceMethod([self class], nowSEL);
+    IMP nowIMP = class_getMethodImplementation([self class], nowSEL);
+    method_setImplementation(nowMethod, originIMP);
+    method_setImplementation(originMethod, nowIMP);
+}
+/**
+ *  设置自定义的字体名
+ *
+ *  @param fontName
+ */
++ (void)setCustomFontName:(NSString *)fontName{
+    myCustomFontName = fontName;
+}
+/**
+ *  子类要继承并且复写这个
+ *  @param font
+ */
+- (void)customSetFont:(UIFont *)oldFont{
+    //自定义内容
+    if (myCustomFontName && ![@"" isEqual:myCustomFontName]) {
+        [self customSetFont:[UIFont fontWithName:myCustomFontName size:oldFont.pointSize]];
+    }else{
+        [self customSetFont:oldFont];
+    }
+}
+
+
 //根据文字内容设置高度
 - (void)setAutoHeightWithContent{
     float height = [self sizeWithContent];
