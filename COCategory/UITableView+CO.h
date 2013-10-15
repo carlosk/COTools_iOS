@@ -12,10 +12,10 @@
 @interface UITableView (CO)
 @property(nonatomic,strong,readonly)TableViewDataHandler  * handler;
 //填充数据到TableVIew,省却delegate
-- (void)fillWithSetions:(NSArray *)setions withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
+- (void)fillWithSetions:(NSMutableArray *)setions withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
 
 //填充数据到TableView里,默认章节是1
-- (void)fillWithItems:(NSArray *)items withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
+- (void)fillWithItems:(NSMutableArray *)items withFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass;
 //添加点击的block
 - (void)setOnClickCellBlock:(TableViewDataHandlerClickIndexBlock )block;
 /**
