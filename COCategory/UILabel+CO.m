@@ -17,18 +17,17 @@
 
 //根据内容和宽度获取高度
 -(float )sizeWithContent{
+//    return [self.text sizeWithFont:self.font  constrainedToSize:CGSizeMake(self.frame.size.width,100000)  lineBreakMode:NSLineBreakByWordWrapping].height;
     
-    return [self.text sizeWithFont:self.font  constrainedToSize:CGSizeMake(self.frame.size.width,100000)  lineBreakMode:NSLineBreakByWordWrapping].height;
+    NSMutableDictionary *atts = [[NSMutableDictionary alloc] init];
+    [atts setObject:self.font forKey:NSFontAttributeName];
     
-//    NSMutableDictionary *atts = [[NSMutableDictionary alloc] init];
-//    [atts setObject:self.font forKey:NSFontAttributeName];
-//    
-//    CGRect rect = [self.text boundingRectWithSize:CGSizeMake(self.frame.size.width,100000)
-//                                       options:NSStringDrawingUsesLineFragmentOrigin
-//                                    attributes:atts
-//                                       context:nil];
-//    
-//    return rect.size.height;
+    CGRect rect = [self.text boundingRectWithSize:CGSizeMake(self.frame.size.width,100000)
+                                       options:NSStringDrawingUsesLineFragmentOrigin
+                                    attributes:atts
+                                       context:nil];
+    
+    return rect.size.height;
 }
 
 @end

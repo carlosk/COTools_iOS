@@ -9,5 +9,7 @@
 #import "COTools.h"
 
 @implementation COTools
-
++ (void)load{
+    CLog(@"load cotools");
+}
 @end
