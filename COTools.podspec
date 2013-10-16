@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "COTools"
-  s.version      = "0.0.1"
-  s.summary      = "Sumi Interactive make a new CoreData and iCloud a Third-party library on MagicalRecord."
+  s.version      = "0.0.2"
+  s.summary      = "添加了自定义字体和COBase的内容"
   s.homepage     = "http://www.carloschen.cn"
   s.license      = 'MIT'
   s.author       = {"carlos" => "carlosk@163.com" }

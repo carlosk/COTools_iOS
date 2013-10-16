@@ -44,11 +44,26 @@ static NSString *myCustomFontName;
  */
 - (void)customSetFont:(UIFont *)oldFont{
     //自定义内容
+    UIFont *currentFont = oldFont;
     if (myCustomFontName && ![@"" isEqual:myCustomFontName]) {
-        [self customSetFont:[UIFont fontWithName:myCustomFontName size:oldFont.pointSize]];
-    }else{
-        [self customSetFont:oldFont];
+        currentFont = [UIFont fontWithName:myCustomFontName size:oldFont.pointSize];
     }
+    //用Invork来做
+    SEL targetSEL = @selector(customSetFont:);
+    //获得类和方法的签名
+    NSMethodSignature *methodSignature = [[self class] instanceMethodSignatureForSelector:targetSEL];
+    //从签名获得调用对象
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+    [invocation setTarget:self];
+    [invocation setSelector:targetSEL];
+    //形参,从2开始,0是self本身,1是_cmd
+    [invocation setArgument:&currentFont atIndex:2];
+    [invocation retainArguments];
+    [invocation invoke];
+    //得到返回值，此时不会再调用，只是返回值
+//    [invocation getReturnValue:&returnValue];
+    
+//    [self customSetFont:currentFont];
 }
 
 
