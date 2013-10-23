@@ -97,10 +97,10 @@
         NSArray *items = self.sections[indexPath.section];
         item = items[indexPath.row];
     }
-    objc_msgSend(cell, @selector(fillData:withIndexPath:),item,indexPath);
     if (self.tableViewDataHandlerFillCellBlock) {
         self.tableViewDataHandlerFillCellBlock(cell,item,indexPath);
     }
+    objc_msgSend(cell, @selector(fillData:withIndexPath:),item,indexPath);
     return cell;
 }
 
