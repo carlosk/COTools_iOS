@@ -29,9 +29,6 @@ static NSString *myCustomFontName;
     IMP nowIMP = class_getMethodImplementation([self class], nowSEL);
     method_setImplementation(nowMethod, originIMP);
     method_setImplementation(originMethod, nowIMP);
-
-    id object = nil;
-    nowIMP(object,nowSEL);
 }
 /**
  *  设置自定义的字体名
