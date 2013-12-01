@@ -6,10 +6,10 @@
 //  Copyright (c) 2013年 carlosk. All rights reserved.
 //
 
-#import "COBaseView.h"
+#import "COBaseV.h"
 #import "UIView+CO.h"
 
-@implementation COBaseView
+@implementation COBaseV
 -(void)awakeFromNib{
     //统一设置字体
 //    [ViewUtils customFontsForView:self];

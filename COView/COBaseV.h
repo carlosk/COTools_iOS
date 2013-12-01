@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COBaseView : UIView
+@interface COBaseV : UIView
 #pragma mark View初始化
 -(void)createViews;
 
