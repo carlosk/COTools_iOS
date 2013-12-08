@@ -10,7 +10,18 @@
 #import <objc/runtime.h>
 
 @implementation UIView (CO)
-
+//view转换成图片
+- (UIImage*)convertViewToImage{
+    UIGraphicsBeginImageContext(self.bounds.size);
+    
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 //根据Xib文件创建View
 +(id) createWithXib:(NSString *)xibName;
 {

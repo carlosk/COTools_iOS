@@ -14,4 +14,6 @@
 
 //16进制转换成UIColor
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
+
++ (UIColor *)colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha;
 @end

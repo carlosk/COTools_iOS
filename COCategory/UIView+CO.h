@@ -19,6 +19,9 @@
 @property (nonatomic, readwrite) CGFloat bottom;
 @property (nonatomic, readwrite) CGFloat right;
 
+
+//view转换成图片
+- (UIImage*)convertViewToImage:(UIView*)view;
 //根据Xib文件创建View
 +(id) createWithXib:(NSString *)xibName;
 
