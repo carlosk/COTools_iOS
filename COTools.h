@@ -13,7 +13,6 @@
 #import "COLogTool.h"
 #import "COCommTool.h"
 #import "COCategory.h"
-#import "UITableView+CO.h"
 @interface COTools : NSObject
 
 @end

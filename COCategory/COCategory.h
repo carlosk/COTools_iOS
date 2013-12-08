@@ -17,7 +17,8 @@
 #import "NSDate+CO.h"
 #import "UIDevice+CO.h"
 #import "NSData+CO.h"
-
+#import "UIImage+CO.h"
+#import "UITableView+CO.h"
 
 @interface COCategory : NSObject
 
