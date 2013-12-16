@@ -68,7 +68,7 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
 //    CLog(@"awakeFromNib");
-    [self createView];
+    [self createViews];
     [self createData];
 }
 

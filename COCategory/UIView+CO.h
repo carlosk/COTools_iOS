@@ -21,7 +21,7 @@
 
 
 //view转换成图片
-- (UIImage*)convertViewToImage:(UIView*)view;
+- (UIImage*)convertViewToImage;
 //根据Xib文件创建View
 +(id) createWithXib:(NSString *)xibName;
 

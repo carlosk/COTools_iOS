@@ -26,7 +26,7 @@
 +(void)registerCellNib:(UITableView *)mTableV;
 
 //创建View
--(void)createView;
+-(void)createViews;
 //创建Data数据
 -(void)createData;
 
