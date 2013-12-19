@@ -24,7 +24,8 @@
 - (UIImage*)convertViewToImage;
 //根据Xib文件创建View
 +(id) createWithXib:(NSString *)xibName;
-
+//根据Xib文件创建View
++(id) createWithXib;
 
 //用于添加多个子View加到本View里
 -(void) addSubVs:(UIView *)object, ...;

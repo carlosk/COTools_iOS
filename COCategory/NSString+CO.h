@@ -47,4 +47,11 @@
 - (BOOL) verifyEmail;
 //基本的校验方法
 - (BOOL) verifyBase:(NSString *)regexStr;
+
+//字符串是否为空
++(BOOL)isStringEmpty:(NSString *)string;
+//字符串是否不为空
++(BOOL)isStringNotEmpty:(NSString *)string;
+
+
 @end

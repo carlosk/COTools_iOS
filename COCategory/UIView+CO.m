@@ -34,6 +34,12 @@
     }
 }
 
+//根据Xib文件创建View
++(id) createWithXib{
+    NSString *className =NSStringFromClass([self class]);
+    return [self createWithXib:className];
+}
+
 //把所有的子View加在父View里
 -(void) addSubVs:(UIView *)object, ...
 {

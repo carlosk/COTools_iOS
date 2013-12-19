@@ -67,13 +67,12 @@
 }
 - (void)awakeFromNib{
     [super awakeFromNib];
-//    CLog(@"awakeFromNib");
     [self createViews];
     [self createData];
 }
 
 //创建View
--(void)createView{
+-(void)createViews{
     
 }
 //创建Data数据

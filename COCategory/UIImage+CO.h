@@ -11,4 +11,9 @@
 @interface UIImage (CO)
 //图片旋转
 - (UIImage *)imageWithRotation:(UIImageOrientation)orientation;
+
+//裁剪
+-(UIImage*)cropSubImage:(CGRect)rect;
+//等比缩放
+-(UIImage*)scaleToSize:(CGSize)size;
 @end

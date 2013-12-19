@@ -120,4 +120,15 @@
     return matches.count>0;
 
 }
+
+
+//字符串是否为空
++(BOOL)isStringEmpty:(NSString *)string{
+    
+    return !string || [@"" isEqual:string];
+}
+//字符串是否不为空
++(BOOL)isStringNotEmpty:(NSString *)string{
+    return string && ![@"" isEqual:string];
+}
 @end

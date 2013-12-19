@@ -43,7 +43,7 @@
 
 //用静态创建
 +(id )createVWithXib{
-    id mView = [UIView createWithXib:NSStringFromClass([self class])];
+    id mView = [self createWithXib];
     if (mView) {
         [mView createViews];
         [mView createData];

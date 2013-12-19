@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "COTools"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "添加了自定义字体和COBase的内容"
   s.homepage     = "http://www.carloschen.cn"
   s.license      = 'MIT'

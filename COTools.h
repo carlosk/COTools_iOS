@@ -13,6 +13,9 @@
 #import "COLogTool.h"
 #import "COCommTool.h"
 #import "COCategory.h"
+#import "COBlockTool.h"
+#import "COImagePickerTool.h"
+#import "CODefineTool.h"
 @interface COTools : NSObject
 
 @end
