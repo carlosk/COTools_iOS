@@ -1,9 +1,5 @@
 //
 //  Encryption.m
-//  DownloadFile
-//
-//  Created by  on 12-1-16.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
 #import "Encryption.h"
@@ -105,7 +101,7 @@ static char base64[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
             characters[length++] = base64[buffer[2] & 0x3F];
         else characters[length++] = '=';
     }
-    NSString *g = [[[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES] autorelease];
+    NSString *g = [[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES];
     return g;
 }
 
