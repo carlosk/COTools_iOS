@@ -4,7 +4,7 @@
 //
 //  Created by carlos on 13-9-20.
 //  Copyright (c) 2013年 carlosk. All rights reserved.
-//我平时积累起来的工具.我已经是1.1版了.
+//我平时积累起来的工具.我已经是1.0版了.
 
 #import <Foundation/Foundation.h>
 #import "COPhoneTool.h"
