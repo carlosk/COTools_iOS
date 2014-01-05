@@ -1,0 +1,795 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A3B87753A9B49E7BF2FF126 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B04400781819497E8CE01F97 /* libPods.a */; };
+		851240781878F5FF000DDD44 /* TestDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240771878F5FF000DDD44 /* TestDomain.m */; };
+		8512407A1878FD44000DDD44 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 851240791878FD44000DDD44 /* test */; };
+		851240C018790159000DDD44 /* COCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512407E18790159000DDD44 /* COCategory.m */; };
+		851240C118790159000DDD44 /* NSData+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408018790159000DDD44 /* NSData+CO.m */; };
+		851240C218790159000DDD44 /* NSDate+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408218790159000DDD44 /* NSDate+CO.m */; };
+		851240C318790159000DDD44 /* NSObject+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408418790159000DDD44 /* NSObject+CO.m */; };
+		851240C418790159000DDD44 /* NSString+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408618790159000DDD44 /* NSString+CO.m */; };
+		851240C518790159000DDD44 /* UIButton+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408818790159000DDD44 /* UIButton+CO.m */; };
+		851240C618790159000DDD44 /* UIColor+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408A18790159000DDD44 /* UIColor+CO.m */; };
+		851240C718790159000DDD44 /* UIControl+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408C18790159000DDD44 /* UIControl+CO.m */; };
+		851240C818790159000DDD44 /* UIDevice+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512408E18790159000DDD44 /* UIDevice+CO.m */; };
+		851240C918790159000DDD44 /* UIImage+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409018790159000DDD44 /* UIImage+CO.m */; };
+		851240CA18790159000DDD44 /* UILabel+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409218790159000DDD44 /* UILabel+CO.m */; };
+		851240CB18790159000DDD44 /* UIScrollView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409418790159000DDD44 /* UIScrollView+CO.m */; };
+		851240CC18790159000DDD44 /* UITableView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409618790159000DDD44 /* UITableView+CO.m */; };
+		851240CD18790159000DDD44 /* UITextField+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409818790159000DDD44 /* UITextField+CO.m */; };
+		851240CE18790159000DDD44 /* UITextView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409A18790159000DDD44 /* UITextView+CO.m */; };
+		851240CF18790159000DDD44 /* UIView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409C18790159000DDD44 /* UIView+CO.m */; };
+		851240D018790159000DDD44 /* COAppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512409F18790159000DDD44 /* COAppTool.m */; };
+		851240D118790159000DDD44 /* COBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240A118790159000DDD44 /* COBaseTool.m */; };
+		851240D218790159000DDD44 /* COBlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240A318790159000DDD44 /* COBlockTool.m */; };
+		851240D318790159000DDD44 /* COCommTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240A518790159000DDD44 /* COCommTool.m */; };
+		851240D418790159000DDD44 /* COCrashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240A718790159000DDD44 /* COCrashTool.m */; };
+		851240D518790159000DDD44 /* CODefineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240A918790159000DDD44 /* CODefineTool.m */; };
+		851240D618790159000DDD44 /* COImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240AB18790159000DDD44 /* COImagePickerTool.m */; };
+		851240D718790159000DDD44 /* COLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240AD18790159000DDD44 /* COLogTool.m */; };
+		851240D818790159000DDD44 /* COPhoneTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240AF18790159000DDD44 /* COPhoneTool.m */; };
+		851240D918790159000DDD44 /* TableViewDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240B118790159000DDD44 /* TableViewDataHandler.m */; };
+		851240DA18790159000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240B318790159000DDD44 /* COTools.m */; };
+		851240DB18790159000DDD44 /* COBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240B618790159000DDD44 /* COBaseCell.m */; };
+		851240DC18790159000DDD44 /* COBaseDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240B818790159000DDD44 /* COBaseDomain.m */; };
+		851240DD18790159000DDD44 /* COBaseV.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240BA18790159000DDD44 /* COBaseV.m */; };
+		851240DE18790159000DDD44 /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240BC18790159000DDD44 /* COBaseVC.m */; };
+		851240DF18790159000DDD44 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 851240BF18790159000DDD44 /* Encryption.m */; };
+		8513726117EB867F00C3B2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513726017EB867F00C3B2ED /* Foundation.framework */; };
+		8513726317EB867F00C3B2ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513726217EB867F00C3B2ED /* CoreGraphics.framework */; };
+		8513726517EB867F00C3B2ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513726417EB867F00C3B2ED /* UIKit.framework */; };
+		8513726B17EB867F00C3B2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8513726917EB867F00C3B2ED /* InfoPlist.strings */; };
+		8513726D17EB867F00C3B2ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513726C17EB867F00C3B2ED /* main.m */; };
+		8513727117EB867F00C3B2ED /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8513727017EB867F00C3B2ED /* AppDelegate.mm */; };
+		8513727417EB867F00C3B2ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8513727217EB867F00C3B2ED /* Main.storyboard */; };
+		8513727717EB867F00C3B2ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513727617EB867F00C3B2ED /* ViewController.m */; };
+		8513727917EB867F00C3B2ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8513727817EB867F00C3B2ED /* Images.xcassets */; };
+		8513728017EB867F00C3B2ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513727F17EB867F00C3B2ED /* XCTest.framework */; };
+		8513728117EB867F00C3B2ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513726017EB867F00C3B2ED /* Foundation.framework */; };
+		8513728217EB867F00C3B2ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8513726417EB867F00C3B2ED /* UIKit.framework */; };
+		8513728A17EB867F00C3B2ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8513728817EB867F00C3B2ED /* InfoPlist.strings */; };
+		8513728C17EB867F00C3B2ED /* COToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8513728B17EB867F00C3B2ED /* COToolsTests.m */; };
+		853E277117F7CD3200E1B555 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E277017F7CD3200E1B555 /* TestCell.m */; };
+		853E277317F7CD3E00E1B555 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 853E277217F7CD3E00E1B555 /* TestCell.xib */; };
+		8546C73617EC3E270077DAE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8546C73517EC3E270077DAE4 /* Security.framework */; };
+		8546C74A17EC44D30077DAE4 /* COTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 8546C74917EC44D30077DAE4 /* COTools.podspec */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8513728317EB867F00C3B2ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8513725517EB867F00C3B2ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8513725C17EB867F00C3B2ED;
+			remoteInfo = COTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34BDF84B5148450D813FF9E1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		851240761878F5FF000DDD44 /* TestDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDomain.h; sourceTree = "<group>"; };
+		851240771878F5FF000DDD44 /* TestDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDomain.m; sourceTree = "<group>"; };
+		851240791878FD44000DDD44 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
+		8512407D18790159000DDD44 /* COCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCategory.h; sourceTree = "<group>"; };
+		8512407E18790159000DDD44 /* COCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCategory.m; sourceTree = "<group>"; };
+		8512407F18790159000DDD44 /* NSData+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CO.h"; sourceTree = "<group>"; };
+		8512408018790159000DDD44 /* NSData+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CO.m"; sourceTree = "<group>"; };
+		8512408118790159000DDD44 /* NSDate+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CO.h"; sourceTree = "<group>"; };
+		8512408218790159000DDD44 /* NSDate+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CO.m"; sourceTree = "<group>"; };
+		8512408318790159000DDD44 /* NSObject+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CO.h"; sourceTree = "<group>"; };
+		8512408418790159000DDD44 /* NSObject+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CO.m"; sourceTree = "<group>"; };
+		8512408518790159000DDD44 /* NSString+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CO.h"; sourceTree = "<group>"; };
+		8512408618790159000DDD44 /* NSString+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CO.m"; sourceTree = "<group>"; };
+		8512408718790159000DDD44 /* UIButton+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CO.h"; sourceTree = "<group>"; };
+		8512408818790159000DDD44 /* UIButton+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CO.m"; sourceTree = "<group>"; };
+		8512408918790159000DDD44 /* UIColor+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CO.h"; sourceTree = "<group>"; };
+		8512408A18790159000DDD44 /* UIColor+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CO.m"; sourceTree = "<group>"; };
+		8512408B18790159000DDD44 /* UIControl+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+CO.h"; sourceTree = "<group>"; };
+		8512408C18790159000DDD44 /* UIControl+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+CO.m"; sourceTree = "<group>"; };
+		8512408D18790159000DDD44 /* UIDevice+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+CO.h"; sourceTree = "<group>"; };
+		8512408E18790159000DDD44 /* UIDevice+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CO.m"; sourceTree = "<group>"; };
+		8512408F18790159000DDD44 /* UIImage+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CO.h"; sourceTree = "<group>"; };
+		8512409018790159000DDD44 /* UIImage+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CO.m"; sourceTree = "<group>"; };
+		8512409118790159000DDD44 /* UILabel+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CO.h"; sourceTree = "<group>"; };
+		8512409218790159000DDD44 /* UILabel+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CO.m"; sourceTree = "<group>"; };
+		8512409318790159000DDD44 /* UIScrollView+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CO.h"; sourceTree = "<group>"; };
+		8512409418790159000DDD44 /* UIScrollView+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CO.m"; sourceTree = "<group>"; };
+		8512409518790159000DDD44 /* UITableView+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CO.h"; sourceTree = "<group>"; };
+		8512409618790159000DDD44 /* UITableView+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CO.m"; sourceTree = "<group>"; };
+		8512409718790159000DDD44 /* UITextField+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CO.h"; sourceTree = "<group>"; };
+		8512409818790159000DDD44 /* UITextField+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CO.m"; sourceTree = "<group>"; };
+		8512409918790159000DDD44 /* UITextView+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+CO.h"; sourceTree = "<group>"; };
+		8512409A18790159000DDD44 /* UITextView+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+CO.m"; sourceTree = "<group>"; };
+		8512409B18790159000DDD44 /* UIView+CO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CO.h"; sourceTree = "<group>"; };
+		8512409C18790159000DDD44 /* UIView+CO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CO.m"; sourceTree = "<group>"; };
+		8512409E18790159000DDD44 /* COAppTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COAppTool.h; sourceTree = "<group>"; };
+		8512409F18790159000DDD44 /* COAppTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COAppTool.m; sourceTree = "<group>"; };
+		851240A018790159000DDD44 /* COBaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseTool.h; sourceTree = "<group>"; };
+		851240A118790159000DDD44 /* COBaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseTool.m; sourceTree = "<group>"; };
+		851240A218790159000DDD44 /* COBlockTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBlockTool.h; sourceTree = "<group>"; };
+		851240A318790159000DDD44 /* COBlockTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBlockTool.m; sourceTree = "<group>"; };
+		851240A418790159000DDD44 /* COCommTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCommTool.h; sourceTree = "<group>"; };
+		851240A518790159000DDD44 /* COCommTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCommTool.m; sourceTree = "<group>"; };
+		851240A618790159000DDD44 /* COCrashTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCrashTool.h; sourceTree = "<group>"; };
+		851240A718790159000DDD44 /* COCrashTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCrashTool.m; sourceTree = "<group>"; };
+		851240A818790159000DDD44 /* CODefineTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CODefineTool.h; sourceTree = "<group>"; };
+		851240A918790159000DDD44 /* CODefineTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CODefineTool.m; sourceTree = "<group>"; };
+		851240AA18790159000DDD44 /* COImagePickerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COImagePickerTool.h; sourceTree = "<group>"; };
+		851240AB18790159000DDD44 /* COImagePickerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COImagePickerTool.m; sourceTree = "<group>"; };
+		851240AC18790159000DDD44 /* COLogTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COLogTool.h; sourceTree = "<group>"; };
+		851240AD18790159000DDD44 /* COLogTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COLogTool.m; sourceTree = "<group>"; };
+		851240AE18790159000DDD44 /* COPhoneTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPhoneTool.h; sourceTree = "<group>"; };
+		851240AF18790159000DDD44 /* COPhoneTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPhoneTool.m; sourceTree = "<group>"; };
+		851240B018790159000DDD44 /* TableViewDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataHandler.h; sourceTree = "<group>"; };
+		851240B118790159000DDD44 /* TableViewDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataHandler.m; sourceTree = "<group>"; };
+		851240B218790159000DDD44 /* COTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTools.h; sourceTree = "<group>"; };
+		851240B318790159000DDD44 /* COTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTools.m; sourceTree = "<group>"; };
+		851240B518790159000DDD44 /* COBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseCell.h; sourceTree = "<group>"; };
+		851240B618790159000DDD44 /* COBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseCell.m; sourceTree = "<group>"; };
+		851240B718790159000DDD44 /* COBaseDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseDomain.h; sourceTree = "<group>"; };
+		851240B818790159000DDD44 /* COBaseDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseDomain.m; sourceTree = "<group>"; };
+		851240B918790159000DDD44 /* COBaseV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseV.h; sourceTree = "<group>"; };
+		851240BA18790159000DDD44 /* COBaseV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseV.m; sourceTree = "<group>"; };
+		851240BB18790159000DDD44 /* COBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseVC.h; sourceTree = "<group>"; };
+		851240BC18790159000DDD44 /* COBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseVC.m; sourceTree = "<group>"; };
+		851240BE18790159000DDD44 /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
+		851240BF18790159000DDD44 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
+		8513725D17EB867F00C3B2ED /* COTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8513726017EB867F00C3B2ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8513726217EB867F00C3B2ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8513726417EB867F00C3B2ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8513726817EB867F00C3B2ED /* COTools-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "COTools-Info.plist"; sourceTree = "<group>"; };
+		8513726A17EB867F00C3B2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8513726C17EB867F00C3B2ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8513726E17EB867F00C3B2ED /* COTools-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "COTools-Prefix.pch"; sourceTree = "<group>"; };
+		8513726F17EB867F00C3B2ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8513727017EB867F00C3B2ED /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		8513727317EB867F00C3B2ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8513727517EB867F00C3B2ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8513727617EB867F00C3B2ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8513727817EB867F00C3B2ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8513727E17EB867F00C3B2ED /* COToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8513727F17EB867F00C3B2ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8513728717EB867F00C3B2ED /* COToolsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "COToolsTests-Info.plist"; sourceTree = "<group>"; };
+		8513728917EB867F00C3B2ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8513728B17EB867F00C3B2ED /* COToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COToolsTests.m; sourceTree = "<group>"; };
+		853E276F17F7CD3200E1B555 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
+		853E277017F7CD3200E1B555 /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
+		853E277217F7CD3E00E1B555 /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
+		8546C73517EC3E270077DAE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8546C74917EC44D30077DAE4 /* COTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COTools.podspec; sourceTree = "<group>"; };
+		8550050018629531008CA86C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		8550050118629531008CA86C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		8550050218629531008CA86C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B04400781819497E8CE01F97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8513725A17EB867F00C3B2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8546C73617EC3E270077DAE4 /* Security.framework in Frameworks */,
+				8513726317EB867F00C3B2ED /* CoreGraphics.framework in Frameworks */,
+				8513726517EB867F00C3B2ED /* UIKit.framework in Frameworks */,
+				8513726117EB867F00C3B2ED /* Foundation.framework in Frameworks */,
+				6A3B87753A9B49E7BF2FF126 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8513727B17EB867F00C3B2ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8513728017EB867F00C3B2ED /* XCTest.framework in Frameworks */,
+				8513728217EB867F00C3B2ED /* UIKit.framework in Frameworks */,
+				8513728117EB867F00C3B2ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8512407B18790159000DDD44 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				8512407C18790159000DDD44 /* COCategory */,
+				8512409D18790159000DDD44 /* COTools */,
+				851240B218790159000DDD44 /* COTools.h */,
+				851240B318790159000DDD44 /* COTools.m */,
+				851240B418790159000DDD44 /* COView */,
+				851240BD18790159000DDD44 /* Encryption */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		8512407C18790159000DDD44 /* COCategory */ = {
+			isa = PBXGroup;
+			children = (
+				8512407D18790159000DDD44 /* COCategory.h */,
+				8512407E18790159000DDD44 /* COCategory.m */,
+				8512407F18790159000DDD44 /* NSData+CO.h */,
+				8512408018790159000DDD44 /* NSData+CO.m */,
+				8512408118790159000DDD44 /* NSDate+CO.h */,
+				8512408218790159000DDD44 /* NSDate+CO.m */,
+				8512408318790159000DDD44 /* NSObject+CO.h */,
+				8512408418790159000DDD44 /* NSObject+CO.m */,
+				8512408518790159000DDD44 /* NSString+CO.h */,
+				8512408618790159000DDD44 /* NSString+CO.m */,
+				8512408718790159000DDD44 /* UIButton+CO.h */,
+				8512408818790159000DDD44 /* UIButton+CO.m */,
+				8512408918790159000DDD44 /* UIColor+CO.h */,
+				8512408A18790159000DDD44 /* UIColor+CO.m */,
+				8512408B18790159000DDD44 /* UIControl+CO.h */,
+				8512408C18790159000DDD44 /* UIControl+CO.m */,
+				8512408D18790159000DDD44 /* UIDevice+CO.h */,
+				8512408E18790159000DDD44 /* UIDevice+CO.m */,
+				8512408F18790159000DDD44 /* UIImage+CO.h */,
+				8512409018790159000DDD44 /* UIImage+CO.m */,
+				8512409118790159000DDD44 /* UILabel+CO.h */,
+				8512409218790159000DDD44 /* UILabel+CO.m */,
+				8512409318790159000DDD44 /* UIScrollView+CO.h */,
+				8512409418790159000DDD44 /* UIScrollView+CO.m */,
+				8512409518790159000DDD44 /* UITableView+CO.h */,
+				8512409618790159000DDD44 /* UITableView+CO.m */,
+				8512409718790159000DDD44 /* UITextField+CO.h */,
+				8512409818790159000DDD44 /* UITextField+CO.m */,
+				8512409918790159000DDD44 /* UITextView+CO.h */,
+				8512409A18790159000DDD44 /* UITextView+CO.m */,
+				8512409B18790159000DDD44 /* UIView+CO.h */,
+				8512409C18790159000DDD44 /* UIView+CO.m */,
+			);
+			path = COCategory;
+			sourceTree = "<group>";
+		};
+		8512409D18790159000DDD44 /* COTools */ = {
+			isa = PBXGroup;
+			children = (
+				8512409E18790159000DDD44 /* COAppTool.h */,
+				8512409F18790159000DDD44 /* COAppTool.m */,
+				851240A018790159000DDD44 /* COBaseTool.h */,
+				851240A118790159000DDD44 /* COBaseTool.m */,
+				851240A218790159000DDD44 /* COBlockTool.h */,
+				851240A318790159000DDD44 /* COBlockTool.m */,
+				851240A418790159000DDD44 /* COCommTool.h */,
+				851240A518790159000DDD44 /* COCommTool.m */,
+				851240A618790159000DDD44 /* COCrashTool.h */,
+				851240A718790159000DDD44 /* COCrashTool.m */,
+				851240A818790159000DDD44 /* CODefineTool.h */,
+				851240A918790159000DDD44 /* CODefineTool.m */,
+				851240AA18790159000DDD44 /* COImagePickerTool.h */,
+				851240AB18790159000DDD44 /* COImagePickerTool.m */,
+				851240AC18790159000DDD44 /* COLogTool.h */,
+				851240AD18790159000DDD44 /* COLogTool.m */,
+				851240AE18790159000DDD44 /* COPhoneTool.h */,
+				851240AF18790159000DDD44 /* COPhoneTool.m */,
+				851240B018790159000DDD44 /* TableViewDataHandler.h */,
+				851240B118790159000DDD44 /* TableViewDataHandler.m */,
+			);
+			path = COTools;
+			sourceTree = "<group>";
+		};
+		851240B418790159000DDD44 /* COView */ = {
+			isa = PBXGroup;
+			children = (
+				851240B518790159000DDD44 /* COBaseCell.h */,
+				851240B618790159000DDD44 /* COBaseCell.m */,
+				851240B718790159000DDD44 /* COBaseDomain.h */,
+				851240B818790159000DDD44 /* COBaseDomain.m */,
+				851240B918790159000DDD44 /* COBaseV.h */,
+				851240BA18790159000DDD44 /* COBaseV.m */,
+				851240BB18790159000DDD44 /* COBaseVC.h */,
+				851240BC18790159000DDD44 /* COBaseVC.m */,
+			);
+			path = COView;
+			sourceTree = "<group>";
+		};
+		851240BD18790159000DDD44 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				851240BE18790159000DDD44 /* Encryption.h */,
+				851240BF18790159000DDD44 /* Encryption.m */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		8513725417EB867F00C3B2ED = {
+			isa = PBXGroup;
+			children = (
+				8513726617EB867F00C3B2ED /* COTools */,
+				8513728517EB867F00C3B2ED /* COToolsTests */,
+				8513725F17EB867F00C3B2ED /* Frameworks */,
+				8513725E17EB867F00C3B2ED /* Products */,
+				34BDF84B5148450D813FF9E1 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		8513725E17EB867F00C3B2ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8513725D17EB867F00C3B2ED /* COTools.app */,
+				8513727E17EB867F00C3B2ED /* COToolsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8513725F17EB867F00C3B2ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8546C73517EC3E270077DAE4 /* Security.framework */,
+				8513726017EB867F00C3B2ED /* Foundation.framework */,
+				8513726217EB867F00C3B2ED /* CoreGraphics.framework */,
+				8513726417EB867F00C3B2ED /* UIKit.framework */,
+				8513727F17EB867F00C3B2ED /* XCTest.framework */,
+				B04400781819497E8CE01F97 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8513726617EB867F00C3B2ED /* COTools */ = {
+			isa = PBXGroup;
+			children = (
+				8513729517EB869600C3B2ED /* COTools */,
+				8513726F17EB867F00C3B2ED /* AppDelegate.h */,
+				8513727017EB867F00C3B2ED /* AppDelegate.mm */,
+				8513727217EB867F00C3B2ED /* Main.storyboard */,
+				8513727517EB867F00C3B2ED /* ViewController.h */,
+				8513727617EB867F00C3B2ED /* ViewController.m */,
+				8513727817EB867F00C3B2ED /* Images.xcassets */,
+				8513726717EB867F00C3B2ED /* Supporting Files */,
+				853E276F17F7CD3200E1B555 /* TestCell.h */,
+				853E277017F7CD3200E1B555 /* TestCell.m */,
+				853E277217F7CD3E00E1B555 /* TestCell.xib */,
+				851240761878F5FF000DDD44 /* TestDomain.h */,
+				851240771878F5FF000DDD44 /* TestDomain.m */,
+			);
+			path = COTools;
+			sourceTree = "<group>";
+		};
+		8513726717EB867F00C3B2ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8513726817EB867F00C3B2ED /* COTools-Info.plist */,
+				8513726917EB867F00C3B2ED /* InfoPlist.strings */,
+				8513726C17EB867F00C3B2ED /* main.m */,
+				8513726E17EB867F00C3B2ED /* COTools-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8513728517EB867F00C3B2ED /* COToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8513728B17EB867F00C3B2ED /* COToolsTests.m */,
+				8513728617EB867F00C3B2ED /* Supporting Files */,
+			);
+			path = COToolsTests;
+			sourceTree = "<group>";
+		};
+		8513728617EB867F00C3B2ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8513728717EB867F00C3B2ED /* COToolsTests-Info.plist */,
+				8513728817EB867F00C3B2ED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8513729517EB869600C3B2ED /* COTools */ = {
+			isa = PBXGroup;
+			children = (
+				8512407B18790159000DDD44 /* core */,
+				8546C74917EC44D30077DAE4 /* COTools.podspec */,
+				851240791878FD44000DDD44 /* test */,
+			);
+			path = COTools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8513725C17EB867F00C3B2ED /* COTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8513728F17EB867F00C3B2ED /* Build configuration list for PBXNativeTarget "COTools" */;
+			buildPhases = (
+				9B2D86D4982844AF8C1A8BC6 /* Check Pods Manifest.lock */,
+				8513725917EB867F00C3B2ED /* Sources */,
+				8513725A17EB867F00C3B2ED /* Frameworks */,
+				8513725B17EB867F00C3B2ED /* Resources */,
+				F4AD76E18D814518B79D8D27 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = COTools;
+			productName = COTools;
+			productReference = 8513725D17EB867F00C3B2ED /* COTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8513727D17EB867F00C3B2ED /* COToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8513729217EB867F00C3B2ED /* Build configuration list for PBXNativeTarget "COToolsTests" */;
+			buildPhases = (
+				8513727A17EB867F00C3B2ED /* Sources */,
+				8513727B17EB867F00C3B2ED /* Frameworks */,
+				8513727C17EB867F00C3B2ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8513728417EB867F00C3B2ED /* PBXTargetDependency */,
+			);
+			name = COToolsTests;
+			productName = COToolsTests;
+			productReference = 8513727E17EB867F00C3B2ED /* COToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8513725517EB867F00C3B2ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = carlosk;
+				TargetAttributes = {
+					8513727D17EB867F00C3B2ED = {
+						TestTargetID = 8513725C17EB867F00C3B2ED;
+					};
+				};
+			};
+			buildConfigurationList = 8513725817EB867F00C3B2ED /* Build configuration list for PBXProject "COTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 8513725417EB867F00C3B2ED;
+			productRefGroup = 8513725E17EB867F00C3B2ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8513725C17EB867F00C3B2ED /* COTools */,
+				8513727D17EB867F00C3B2ED /* COToolsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8513725B17EB867F00C3B2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8513727917EB867F00C3B2ED /* Images.xcassets in Resources */,
+				8513726B17EB867F00C3B2ED /* InfoPlist.strings in Resources */,
+				8512407A1878FD44000DDD44 /* test in Resources */,
+				8546C74A17EC44D30077DAE4 /* COTools.podspec in Resources */,
+				853E277317F7CD3E00E1B555 /* TestCell.xib in Resources */,
+				8513727417EB867F00C3B2ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8513727C17EB867F00C3B2ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8513728A17EB867F00C3B2ED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B2D86D4982844AF8C1A8BC6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		F4AD76E18D814518B79D8D27 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8513725917EB867F00C3B2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				851240D318790159000DDD44 /* COCommTool.m in Sources */,
+				8513727717EB867F00C3B2ED /* ViewController.m in Sources */,
+				851240CE18790159000DDD44 /* UITextView+CO.m in Sources */,
+				851240CC18790159000DDD44 /* UITableView+CO.m in Sources */,
+				851240C818790159000DDD44 /* UIDevice+CO.m in Sources */,
+				851240CA18790159000DDD44 /* UILabel+CO.m in Sources */,
+				851240D918790159000DDD44 /* TableViewDataHandler.m in Sources */,
+				851240DE18790159000DDD44 /* COBaseVC.m in Sources */,
+				851240DA18790159000DDD44 /* COTools.m in Sources */,
+				851240C418790159000DDD44 /* NSString+CO.m in Sources */,
+				851240D618790159000DDD44 /* COImagePickerTool.m in Sources */,
+				851240D418790159000DDD44 /* COCrashTool.m in Sources */,
+				851240781878F5FF000DDD44 /* TestDomain.m in Sources */,
+				851240CF18790159000DDD44 /* UIView+CO.m in Sources */,
+				851240C218790159000DDD44 /* NSDate+CO.m in Sources */,
+				8513727117EB867F00C3B2ED /* AppDelegate.mm in Sources */,
+				851240C318790159000DDD44 /* NSObject+CO.m in Sources */,
+				851240D018790159000DDD44 /* COAppTool.m in Sources */,
+				851240D718790159000DDD44 /* COLogTool.m in Sources */,
+				851240D818790159000DDD44 /* COPhoneTool.m in Sources */,
+				851240D518790159000DDD44 /* CODefineTool.m in Sources */,
+				851240DD18790159000DDD44 /* COBaseV.m in Sources */,
+				851240DF18790159000DDD44 /* Encryption.m in Sources */,
+				8513726D17EB867F00C3B2ED /* main.m in Sources */,
+				851240C518790159000DDD44 /* UIButton+CO.m in Sources */,
+				853E277117F7CD3200E1B555 /* TestCell.m in Sources */,
+				851240C918790159000DDD44 /* UIImage+CO.m in Sources */,
+				851240DC18790159000DDD44 /* COBaseDomain.m in Sources */,
+				851240CD18790159000DDD44 /* UITextField+CO.m in Sources */,
+				851240C618790159000DDD44 /* UIColor+CO.m in Sources */,
+				851240C718790159000DDD44 /* UIControl+CO.m in Sources */,
+				851240D218790159000DDD44 /* COBlockTool.m in Sources */,
+				851240D118790159000DDD44 /* COBaseTool.m in Sources */,
+				851240DB18790159000DDD44 /* COBaseCell.m in Sources */,
+				851240C018790159000DDD44 /* COCategory.m in Sources */,
+				851240CB18790159000DDD44 /* UIScrollView+CO.m in Sources */,
+				851240C118790159000DDD44 /* NSData+CO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8513727A17EB867F00C3B2ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8513728C17EB867F00C3B2ED /* COToolsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8513728417EB867F00C3B2ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8513725C17EB867F00C3B2ED /* COTools */;
+			targetProxy = 8513728317EB867F00C3B2ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8513726917EB867F00C3B2ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8513726A17EB867F00C3B2ED /* en */,
+				8550050118629531008CA86C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8513727217EB867F00C3B2ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8513727317EB867F00C3B2ED /* Base */,
+				8550050018629531008CA86C /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8513728817EB867F00C3B2ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8513728917EB867F00C3B2ED /* en */,
+				8550050218629531008CA86C /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8513728D17EB867F00C3B2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8513728E17EB867F00C3B2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8513729017EB867F00C3B2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34BDF84B5148450D813FF9E1 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "COTools/COTools-Prefix.pch";
+				INFOPLIST_FILE = "COTools/COTools-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8513729117EB867F00C3B2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34BDF84B5148450D813FF9E1 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "COTools/COTools-Prefix.pch";
+				INFOPLIST_FILE = "COTools/COTools-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8513729317EB867F00C3B2ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COTools.app/COTools";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "COTools/COTools-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "COToolsTests/COToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8513729417EB867F00C3B2ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COTools.app/COTools";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "COTools/COTools-Prefix.pch";
+				INFOPLIST_FILE = "COToolsTests/COToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8513725817EB867F00C3B2ED /* Build configuration list for PBXProject "COTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8513728D17EB867F00C3B2ED /* Debug */,
+				8513728E17EB867F00C3B2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8513728F17EB867F00C3B2ED /* Build configuration list for PBXNativeTarget "COTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8513729017EB867F00C3B2ED /* Debug */,
+				8513729117EB867F00C3B2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8513729217EB867F00C3B2ED /* Build configuration list for PBXNativeTarget "COToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8513729317EB867F00C3B2ED /* Debug */,
+				8513729417EB867F00C3B2ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8513725517EB867F00C3B2ED /* Project object */;
+}
