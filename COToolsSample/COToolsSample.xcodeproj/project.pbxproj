@@ -290,7 +290,7 @@
 				8512414D187903EB000DDD44 /* COTools */,
 				85124162187903EB000DDD44 /* COTools.h */,
 				85124163187903EB000DDD44 /* COTools.m */,
-				85124164187903EB000DDD44 /* COView */,
+				85124164187903EB000DDD44 /* COBase */,
 				8512416D187903EB000DDD44 /* Encryption */,
 			);
 			path = core;
@@ -362,7 +362,7 @@
 			path = COTools;
 			sourceTree = "<group>";
 		};
-		85124164187903EB000DDD44 /* COView */ = {
+		85124164187903EB000DDD44 /* COBase */ = {
 			isa = PBXGroup;
 			children = (
 				85124165187903EB000DDD44 /* COBaseCell.h */,
@@ -374,6 +374,7 @@
 				8512416B187903EB000DDD44 /* COBaseVC.h */,
 				8512416C187903EB000DDD44 /* COBaseVC.m */,
 			);
+			name = COBase;
 			path = COView;
 			sourceTree = "<group>";
 		};

@@ -21,12 +21,7 @@
 
 - (void)viewDidLoad
 {
-    TestDomain *doamin = [[TestDomain alloc]init];
-    doamin.name = @"陈渊佑";
-    doamin.age = 123;
-    doamin.address = @"上海市闵行区万源路2158号弘毅大厦B座元聚科技有限公司技术部";
-    CLog(@"%@",doamin);
-    self.contentTF.delegate = self;
+       self.contentTF.delegate = self;
     self.contentTF.maxLength = 2;
     __block typeof(self)bSelf = self;
 
@@ -58,6 +53,37 @@
     void(^block)(NSString *test1,NSString *test2) = [test blockForDefaultEvent];
     block(@"t1",@"t2");
 
+    //domain的desp
+    TestDomain *doamin = [[TestDomain alloc]init];
+    doamin.name = @"陈渊佑";
+    doamin.age = 123;
+    doamin.address = @"上海市闵行区万源路2158号弘毅大厦B座元聚科技有限公司技术部";
+    CLog(@"%@",doamin);
+
+    //测试数据存储
+    [TestDomain saveArchiverOne:doamin];
+    id domain = [TestDomain getArchiverOne:[TestDomain class]];
+    
+    CLog(@"从文件里取出来的%@",domain);
+    //测试数组的存入
+    
+    
+    doamin = [[TestDomain alloc]init];
+    doamin.name = @"a1";
+    doamin.age = 12;
+    doamin.address = @"addressaa";
+    NSMutableArray *data = [NSMutableArray array];
+    [data addObject:domain];
+    doamin.name = @"a2";
+    doamin.age = 12222;
+    doamin.address = @"addressaa222";
+    [data addObject:domain];
+    [NSObject  saveArchiverArray:data withClass:[TestDomain class]];
+    NSArray *data1 =[NSObject getArchiverArray:[TestDomain class]];
+    for (TestDomain *eachDomain in data1) {
+        CLog(@"%@",eachDomain);
+
+    }
 //    int maxLength = 2;
 //    [super viewDidLoad];
 //    [self.contentTF.rac_textSignal map:^id(id value) {

@@ -110,6 +110,65 @@ const char ZXObjectSingleObjectDictionary;
 }
 
 
+#pragma mark 数据存储
+//保存到Archiver中
+#define kOneArchiverKey(class) [NSString stringWithFormat:@"%s_oneArchiverKey",class_getName(class)]
+#define kNSArrayArchiverKey(class) [NSString stringWithFormat:@"%s_nsarrayArchiverKey",class_getName(class)]
+#define kArchiverFILENAME [NSString stringWithFormat:@"%s_ArchiverFILENAMEKey",class_getName([self class])]
+
+//存储一个对象
++ (BOOL)saveArchiverOne:(id)domain{
+    return [self saveArchiverData:domain withKey:kOneArchiverKey([domain class])];
+}
+
+//存储一组对象
++ (BOOL)saveArchiverArray:(NSArray *)domains withClass:(Class )class{
+    
+//    NSMutableData *data2 =[[NSMutableData alloc] init];
+//    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data2];
+//    NSString *key = kNSArrayArchiverKey(class) ;
+//    [archiver encodeObject:domains forKey: key];
+//    [archiver finishEncoding];
+//    BOOL success = [data2 writeToFile:[self archiverPath] atomically:YES];
+//    return success;
+    
+    return [self saveArchiverData:domains withKey:kNSArrayArchiverKey(class)];
+
+
+}
+//获取获取一组对象
++ (id)getArchiverArray:(Class )class{
+    return [self getArchiverData:class withKey:kNSArrayArchiverKey(class)];
+}
+
++ (BOOL)saveArchiverData:(id)data withKey:(NSString *)key{
+    NSMutableData *data2 =[[NSMutableData alloc] init];
+    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data2];
+    [archiver encodeObject:data forKey: key];
+    [archiver finishEncoding];
+    BOOL success = [data2 writeToFile:[self archiverPath] atomically:YES];
+    return success;
+}
+//获取一组对象
++ (id)getArchiverData:(Class )class withKey:(NSString *)key{
+    NSData*data1=[[NSData alloc]initWithContentsOfFile:[self archiverPath]];
+    
+    NSKeyedUnarchiver*unArchiver=[[NSKeyedUnarchiver alloc]initForReadingWithData:data1];
+    return [unArchiver decodeObjectOfClass:class forKey:key];
+}
+
+//获取一个对象,根据key
++ (id)getArchiverOne:(Class )class{
+    return [self getArchiverData:class withKey:kOneArchiverKey(class)];
+}
+//获取路径
+- (NSString *)archiverPath{
+    NSArray*paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString*documentsDirectory=[paths objectAtIndex: 0 ];
+    
+    NSString*filePath=[documentsDirectory stringByAppendingPathComponent:kArchiverFILENAME];
+    return filePath;
+}
 
 
 @end

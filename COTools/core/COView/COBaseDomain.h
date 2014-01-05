@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface COBaseDomain : NSObject
+@interface COBaseDomain : NSObject<NSCoding>
 -(id)initWithJson:(NSDictionary *)json;
 
 @end

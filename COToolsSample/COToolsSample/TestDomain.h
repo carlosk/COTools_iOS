@@ -8,7 +8,7 @@
 
 #import "COBaseDomain.h"
 
-@interface TestDomain : COBaseDomain
+@interface TestDomain : COBaseDomain<NSCoding>
 @property(nonatomic,strong)NSString  * name;
 @property(nonatomic,assign)int age;
 @property(nonatomic,strong)NSString  * address;

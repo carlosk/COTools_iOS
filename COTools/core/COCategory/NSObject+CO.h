@@ -34,4 +34,14 @@
 -(void)receiveObject:(void(^)(id object))sendObject withIdentifier:(NSString *)identifier;
 -(void)sendObject:(id)object withIdentifier:(NSString *)identifier;
 
+
+//数据存储
++ (BOOL)saveArchiverOne:(id)domain;
+
++ (id)getArchiverOne:(Class )class;
+
+//存储一组对象
++ (BOOL)saveArchiverArray:(NSArray *)domains withClass:(Class )class;
+//获取一组对象
++ (id)getArchiverArray:(Class )class;
 @end
