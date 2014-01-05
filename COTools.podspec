@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "COTools"
   s.version      = "1.1"
-  s.summary      = "add json parse and more"
+  s.summary      = "carlos tools"
   s.homepage     = "http://www.carloschen.cn"
   s.license      = 'MIT'
   s.author       = {"carlos" => "carlosk@163.com" }

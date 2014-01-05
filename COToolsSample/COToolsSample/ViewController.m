@@ -97,12 +97,12 @@
     self.contentTV.delegate = self;
     [COCommTool registerForKeyboardNotificationsWithScrollView:self.bgScrollView withInputViews:@[self.contentTV,self.contentTF]];
 //    [self.contentTV ];
-//    BOOL(^checkBlock)(NSString  *strNew,NSString *strOld) = ^BOOL (NSString  *strNew,NSString *strOld) {
-//        CLog(@"新的是%@,旧的是%@",strNew,strOld);
-//        return strNew.length < 4;
-////        return YES;
-//    };
-//    [self.contentTV setCheckEditContentBlock:checkBlock];
+    BOOL(^checkBlock)(NSString  *strNew,NSString *strOld) = ^BOOL (NSString  *strNew,NSString *strOld) {
+        CLog(@"新的是%@,旧的是%@",strNew,strOld);
+        return strNew.length < 4;
+//        return YES;
+    };
+    [self.contentTV setCheckEditContentBlock:checkBlock];
 //    int maxLength = 2;
 //    [super viewDidLoad];
 //    [self.contentTF.rac_textSignal map:^id(id value) {

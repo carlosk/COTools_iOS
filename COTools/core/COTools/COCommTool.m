@@ -128,11 +128,8 @@ static CGSize kbSize;//这是键盘的显示出来的size
 + (void)keyboardWillShown:(NSNotification*)aNotification
 {
     NSDictionary* info = [aNotification userInfo];
-//    CLog(@"keyboardWasShown %@",info);
-    
-    //这是停止的时候的size
+
     CGSize kbSize1 = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-//    CLog(@"kbSize w = %f,h = %f",kbSize1.width,kbSize1.height);
     kbSize  = kbSize1;
     UIView *focusView = nil;
     for (UIView *eachView in inputViews) {

@@ -36,6 +36,6 @@ return __singleton__; \
 //根据key获取value
 +(id )valueByKey:(NSString *)key;
 
-
+//注册键盘的监听
 + (void)registerForKeyboardNotificationsWithScrollView:(UIScrollView *)scrllView withInputViews:(NSArray *)inputViews1;
 @end
