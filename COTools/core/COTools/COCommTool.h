@@ -30,4 +30,9 @@ return __singleton__; \
  *  @param json   json的字典
  */
 + (void)fillObject:(id )object withJSONDict:(NSDictionary *)json;
+
+//根据key存入value
++(void)saveValue:(id)value byKey:(NSString *)key;
+//根据key获取value
++(id )valueByKey:(NSString *)key;
 @end
