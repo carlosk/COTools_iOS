@@ -14,10 +14,15 @@
 @interface UITextViewDelegateHandler : NSObject <UITextViewDelegate>
 @property(nonatomic,assign) id<UITextViewDelegate> oldDelegate;
 @property(nonatomic,copy) BOOL(^checkBlock)(NSString  *strNew,NSString *strOld);
+@property(nonatomic,copy)id(^actionTypeBlock)(UITextView *textF,UITextViewActionType type);
 @end
 
 @implementation UITextViewDelegateHandler
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textView,TextViewShouldBeginEditingType) boolValue];
+    }
     if ([self.oldDelegate respondsToSelector:@selector(textViewShouldBeginEditing:)])
     {
         return [self.oldDelegate textViewShouldBeginEditing:textView];
@@ -25,6 +30,11 @@
     return YES;
 }
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{
+    
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textView,TextViewShouldEndEditingType) boolValue];
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textViewShouldEndEditing:)])
     {
         return [self.oldDelegate textViewShouldEndEditing:textView];
@@ -33,12 +43,24 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
+    
+    if (self.actionTypeBlock) {
+        self.actionTypeBlock(textView,TextViewDidBeginEditingType);
+        return;
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textViewDidBeginEditing:)])
     {
         [self.oldDelegate textViewDidBeginEditing:textView];
     }
 }
 - (void)textViewDidEndEditing:(UITextView *)textView{
+    
+    if (self.actionTypeBlock) {
+        self.actionTypeBlock(textView,TextViewDidEndEditingType);
+        return;
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textViewDidEndEditing:)])
     {
         [self.oldDelegate textViewDidEndEditing:textView];
@@ -69,6 +91,11 @@
     return YES;
 }
 - (void)textViewDidChange:(UITextView *)textView{
+    if (self.actionTypeBlock) {
+        self.actionTypeBlock(textView,TextViewDidChangeType);
+        return;
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textViewDidChange:)])
     {
         [self.oldDelegate textViewDidChange:textView];
@@ -76,6 +103,11 @@
 }
 
 - (void)textViewDidChangeSelection:(UITextView *)textView{
+    if (self.actionTypeBlock) {
+        self.actionTypeBlock(textView,TextViewDidChangeSelectionType);
+        return;
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textViewDidChangeSelection:)])
     {
         [self.oldDelegate textViewDidChangeSelection:textView];
@@ -118,10 +150,25 @@
         objc_setAssociatedObject(self, (const void *)(kUITextViewDelegateHandler), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     handler.checkBlock = checkBlock;
-    handler.oldDelegate = self.delegate;
+    if (handler != self.delegate) {
+        handler.oldDelegate = self.delegate;
+    }
     self.delegate = handler;
 }
-
+//设置textView的动作的block监听
+- (void)setActionTypeBlock:(id(^)(UITextView *textF,UITextViewActionType type))actionTypeBlock{
+    
+    UITextViewDelegateHandler *handler = objc_getAssociatedObject(self, (const void *)(kUITextViewDelegateHandler));
+    if (!handler) {
+        handler = [[UITextViewDelegateHandler alloc]init];
+        objc_setAssociatedObject(self, (const void *)(kUITextViewDelegateHandler), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    if (handler != self.delegate) {
+        handler.oldDelegate = self.delegate;
+    }
+    self.delegate = handler;
+    handler.actionTypeBlock = actionTypeBlock;
+}
 //- (void)setDelegate:(id<UITextViewDelegate>)delegate{
 //   UITextViewDelegateHandler *handler = objc_getAssociatedObject(self, (const void *)(kUITextViewDelegateHandler));
 //    if (handler) {

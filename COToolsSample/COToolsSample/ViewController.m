@@ -14,6 +14,8 @@
 @property(nonatomic,strong)UITableView  * mTableV;
 @property(nonatomic,weak)IBOutlet UITextField *contentTF;
 @property(nonatomic,weak)IBOutlet UITextView *contentTV;
+@property(nonatomic,weak)IBOutlet UIScrollView *bgScrollView;
+
 
 @end
 
@@ -93,6 +95,7 @@
 
     //检测textview的内容block
     self.contentTV.delegate = self;
+    [COCommTool registerForKeyboardNotificationsWithScrollView:self.bgScrollView withInputViews:@[self.contentTV,self.contentTF]];
 //    [self.contentTV ];
 //    BOOL(^checkBlock)(NSString  *strNew,NSString *strOld) = ^BOOL (NSString  *strNew,NSString *strOld) {
 //        CLog(@"新的是%@,旧的是%@",strNew,strOld);

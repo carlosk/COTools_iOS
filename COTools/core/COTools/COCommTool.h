@@ -35,4 +35,7 @@ return __singleton__; \
 +(void)saveValue:(id)value byKey:(NSString *)key;
 //根据key获取value
 +(id )valueByKey:(NSString *)key;
+
+
++ (void)registerForKeyboardNotificationsWithScrollView:(UIScrollView *)scrllView withInputViews:(NSArray *)inputViews1;
 @end

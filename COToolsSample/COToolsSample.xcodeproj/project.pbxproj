@@ -60,6 +60,7 @@
 		8512419518794165000DDD44 /* COParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419418794165000DDD44 /* COParseTool.m */; };
 		8512419818794222000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
 		8512419B18794230000DDD44 /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
+		8512419D1879533F000DDD44 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8512419C1879533F000DDD44 /* Reveal.framework */; };
 		B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F99BD25704F408090AA1DDB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,7 @@
 		8512419718794222000DDD44 /* COTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTools.m; sourceTree = "<group>"; };
 		8512419918794230000DDD44 /* COUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COUtils.h; sourceTree = "<group>"; };
 		8512419A18794230000DDD44 /* COUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COUtils.m; sourceTree = "<group>"; };
+		8512419C1879533F000DDD44 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		9A49DFB699744A25B341B7A8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +181,7 @@
 			files = (
 				851240EF18790365000DDD44 /* CoreGraphics.framework in Frameworks */,
 				851240F118790365000DDD44 /* UIKit.framework in Frameworks */,
+				8512419D1879533F000DDD44 /* Reveal.framework in Frameworks */,
 				851240ED18790365000DDD44 /* Foundation.framework in Frameworks */,
 				B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */,
 			);
@@ -220,6 +223,7 @@
 		851240EB18790365000DDD44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8512419C1879533F000DDD44 /* Reveal.framework */,
 				851240EC18790365000DDD44 /* Foundation.framework */,
 				851240EE18790365000DDD44 /* CoreGraphics.framework */,
 				851240F018790365000DDD44 /* UIKit.framework */,
@@ -698,6 +702,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/carlosk/Desktop/workspace/01IOSCode/09MyFramework/COTools/COToolsSample,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "COToolsSample/COToolsSample-Prefix.pch";
 				INFOPLIST_FILE = "COToolsSample/COToolsSample-Info.plist";
@@ -713,6 +721,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/carlosk/Desktop/workspace/01IOSCode/09MyFramework/COTools/COToolsSample,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "COToolsSample/COToolsSample-Prefix.pch";
 				INFOPLIST_FILE = "COToolsSample/COToolsSample-Info.plist";

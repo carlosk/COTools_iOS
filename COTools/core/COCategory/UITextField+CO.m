@@ -13,10 +13,16 @@
 @interface UITextFiledDelegateHandler : NSObject <UITextFieldDelegate>
 @property(nonatomic,assign) id<UITextFieldDelegate> oldDelegate;
 @property(nonatomic,copy) BOOL(^checkBlock)(NSString  *strNew,NSString *strOld);
+@property(nonatomic,copy)id(^actionTypeBlock)(UITextField *textF,UITextFieldActionType type);
 @end
 
 @implementation UITextFiledDelegateHandler
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textField,TextFieldShouldBeginEditingType) boolValue];
+    }
     if ([self.oldDelegate respondsToSelector:@selector(textFieldShouldBeginEditing:)])
     {
         return [self.oldDelegate textFieldShouldBeginEditing:textField];
@@ -24,12 +30,20 @@
     return YES;
 }
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+    if (self.actionTypeBlock) {
+        self.actionTypeBlock(textField,TextFieldDidBeginEditingType);
+        return;
+    }
     if ([self.oldDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)])
     {
         [self.oldDelegate textFieldDidBeginEditing:textField];
     }
 }
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textField,TextFieldShouldEndEditingType) boolValue];
+    }
     
     if ([self.oldDelegate respondsToSelector:@selector(textFieldShouldEndEditing:)])
     {
@@ -38,6 +52,10 @@
     return YES;
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (self.actionTypeBlock) {
+        [self.actionTypeBlock(textField,TextFieldDidEndEditingType) boolValue];
+        return ;
+    }
     if ([self.oldDelegate respondsToSelector:@selector(textFieldDidEndEditing:)])
     {
         [self.oldDelegate textFieldDidEndEditing:textField];
@@ -67,6 +85,11 @@
      return YES;
 }
 - (BOOL)textFieldShouldClear:(UITextField *)textField{
+    
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textField,TextFieldShouldClearType) boolValue];
+    }
+    
     if ([self.oldDelegate respondsToSelector:@selector(textFieldShouldClear:)])
     {
         return [self.oldDelegate textFieldShouldClear:textField];
@@ -74,6 +97,9 @@
      return YES;
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if (self.actionTypeBlock) {
+        return [self.actionTypeBlock(textField,TextFieldShouldReturnType) boolValue];
+    }
     if ([self.oldDelegate respondsToSelector:@selector(textFieldShouldReturn:)])
     {
         return [self.oldDelegate textFieldShouldReturn:textField];
@@ -99,9 +125,23 @@
         objc_setAssociatedObject(self, (const void *)(kLimitTextLengthKey), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     handler.checkBlock = checkBlock;
-    handler.oldDelegate = self.delegate;
+    if (handler != self.delegate) {
+        handler.oldDelegate = self.delegate;
+    }
     self.delegate = handler;
 }
 
-
+//设置textField的动作的block监听
+- (void)setActionTypeBlock:(id(^)(UITextField *textF,UITextFieldActionType type))actionTypeBlock{
+    UITextFiledDelegateHandler *handler = objc_getAssociatedObject(self, (const void *)(kLimitTextLengthKey));
+    if (!handler) {
+        handler = [[UITextFiledDelegateHandler alloc]init];
+        objc_setAssociatedObject(self, (const void *)(kLimitTextLengthKey), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    handler.actionTypeBlock = actionTypeBlock;
+    if (handler != self.delegate) {
+        handler.oldDelegate = self.delegate;
+    }
+    self.delegate = handler;
+}
 @end
