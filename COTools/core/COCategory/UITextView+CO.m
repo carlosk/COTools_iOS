@@ -13,7 +13,7 @@
 
 @interface UITextViewDelegateHandler : NSObject <UITextViewDelegate>
 @property(nonatomic,assign) id<UITextViewDelegate> oldDelegate;
-@property(nonatomic,assign)int maxLength;//最大的值
+@property(nonatomic,copy) BOOL(^checkBlock)(NSString  *strNew,NSString *strOld);
 @end
 
 @implementation UITextViewDelegateHandler
@@ -47,15 +47,26 @@
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
-    
-    if (range.location < self.maxLength || self.maxLength == 0) {
-        if ([self.oldDelegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)])
-        {
-            return [self.oldDelegate textView:textView shouldChangeTextInRange:range replacementText:text];
+   
+    //如果检查的block,则使用这个block
+    if (self.checkBlock) {
+        NSString *strNew = [textView.text stringByReplacingCharactersInRange:range withString:text];
+        NSString *strOld = textView.text;
+        if (self.checkBlock(strNew,strOld)) {
+            if ([self.oldDelegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)])
+            {
+                return [self.oldDelegate textView:textView shouldChangeTextInRange:range replacementText:text];
+            }
+        }else{
+            return NO;
         }
-        return YES;
     }
-    return NO;
+
+    if ([self.oldDelegate respondsToSelector:@selector(textView:shouldChangeTextInRange:replacementText:)])
+    {
+        return [self.oldDelegate textView:textView shouldChangeTextInRange:range replacementText:text];
+    }
+    return YES;
 }
 - (void)textViewDidChange:(UITextView *)textView{
     if ([self.oldDelegate respondsToSelector:@selector(textViewDidChange:)])
@@ -93,12 +104,22 @@
 - (void)setMaxLength:(int)length
 {
 
-    UITextViewDelegateHandler *handler = [[UITextViewDelegateHandler alloc]init];
-    objc_setAssociatedObject(self, (const void *)(kUITextViewDelegateHandler), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    handler.maxLength = length;
+    [self setCheckEditContentBlock:^BOOL(NSString *strNew, NSString *strOld) {
+        return strNew.length <=length;
+    }];
+    
+}
+
+//设置检查输入内容的block
+- (void)setCheckEditContentBlock:(BOOL(^)(NSString  *strNew,NSString *strOld))checkBlock{
+        UITextViewDelegateHandler *handler = objc_getAssociatedObject(self, (const void *)(kUITextViewDelegateHandler));
+    if (!handler) {
+        handler = [[UITextViewDelegateHandler alloc]init];
+        objc_setAssociatedObject(self, (const void *)(kUITextViewDelegateHandler), handler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    handler.checkBlock = checkBlock;
     handler.oldDelegate = self.delegate;
     self.delegate = handler;
-    
 }
 
 //- (void)setDelegate:(id<UITextViewDelegate>)delegate{
@@ -110,9 +131,4 @@
 //        _delegate = handler;
 //    }
 //}
-
--(int)maxLength{
-    UITextViewDelegateHandler *handler = objc_getAssociatedObject(self, (const void *)(kUITextViewDelegateHandler));
-    return    handler.maxLength;
-}
 @end

@@ -10,6 +10,7 @@
 
 @interface UITextView (CO)
 - (void)setMaxLength:(int)length;
--(int)maxLength;
+//设置检查输入内容的block
+- (void)setCheckEditContentBlock:(BOOL(^)(NSString  *strNew,NSString *strOld))checkBlock;
 @end
 

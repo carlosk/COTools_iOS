@@ -11,5 +11,6 @@
 @interface UITextField (CO)
 //设置最大的字符限制,不能小于等于0
 - (void)setMaxLength:(int)length;
--(int)maxLength;
+//设置检查输入内容的block
+- (void)setCheckEditContentBlock:(BOOL(^)(NSString  *strNew,NSString *strOld))checkBlock;
 @end

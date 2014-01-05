@@ -10,7 +10,7 @@
 #import "TestCell.h"
 #import "COTools.h"
 #import "TestDomain.h"
-@interface ViewController ()<UITextViewDelegate>
+@interface ViewController ()<UITextViewDelegate,UITextFieldDelegate>
 @property(nonatomic,strong)UITableView  * mTableV;
 @property(nonatomic,weak)IBOutlet UITextField *contentTF;
 @property(nonatomic,weak)IBOutlet UITextView *contentTV;
@@ -23,7 +23,7 @@
 {
        self.contentTF.delegate = self;
     self.contentTF.maxLength = 2;
-    __block typeof(self)bSelf = self;
+//    __block typeof(self)bSelf = self;
 
 //    [self.view addTagEvenBlock:^(UIView *sender) {
 //        if (![sender isKindOfClass:[UITextField class]]) {
@@ -33,8 +33,8 @@
 //    }];
 //    CGRect rect = CGRectMake(x, y, w, h);
     [self.view hideKeyboardWithOutTapTextFiledAndTextView:@[self.contentTF,self.contentTV]];
-    self.contentTV.delegate = self;
-    self.contentTV.maxLength = 3;
+//    self.contentTV.delegate = self;
+//    self.contentTV.maxLength = 3;
     NSString *test = @"";
     test.coObject = @(1);
     CLog(@"%@",test.coObject);
@@ -84,6 +84,15 @@
         CLog(@"%@",eachDomain);
 
     }
+    //检测textview的内容block
+    self.contentTV.delegate = self;
+    [self.contentTV setMaxLength:3];
+//    BOOL(^checkBlock)(NSString  *strNew,NSString *strOld) = ^BOOL (NSString  *strNew,NSString *strOld) {
+//        CLog(@"新的是%@,旧的是%@",strNew,strOld);
+//        return strNew.length < 4;
+////        return YES;
+//    };
+//    [self.contentTV setCheckEditContentBlock:checkBlock];
 //    int maxLength = 2;
 //    [super viewDidLoad];
 //    [self.contentTF.rac_textSignal map:^id(id value) {
