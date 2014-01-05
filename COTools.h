@@ -7,6 +7,7 @@
 //我平时积累起来的工具.我已经是1.1版了.1
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "COPhoneTool.h"
 #import "COAppTool.h"
 #import "COCrashTool.h"

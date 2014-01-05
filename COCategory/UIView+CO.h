@@ -32,7 +32,10 @@
 
 //给view添加按键事件
 -(void) addTagEven:(SEL) mSel withTarget:(id)target;
-
+//添加view的tag事件到block上
+-(void) addTagEvenBlock:(void (^)(UIView *sender))block;
+//点击view的除了textview和textfiled的地方就隐藏
+- (void)hideKeyboardWithOutTapTextFiledAndTextView:(NSArray *)views;
 #pragma mark Frame
 
 //设置Y坐标，距离aboveView的interval距离

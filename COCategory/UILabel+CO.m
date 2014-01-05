@@ -11,10 +11,10 @@
 #import <objc/runtime.h>
 @implementation UILabel (CO)
 
-+ (void)load{
-    //定制字体
-    [self customLoadFont];
-}
+//+ (void)load{
+//    //定制字体
+//    [self customLoadFont];
+//}
 
 static NSString *myCustomFontName;
 /**

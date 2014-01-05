@@ -60,6 +60,44 @@
     [self addGestureRecognizer:singleTap];
 }
 
+
+//给view添加按键事件
+
+//-(void)showWithCompletionHandler:(void (^)(NSInteger buttonIndex))completionHandler;
+
+static char addTagEvenBlockKey;
+//添加view的tag事件到block上
+-(void) addTagEvenBlock:(void (^)(UIView *sender))block{
+//    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:target action:mSel];
+//    [self addGestureRecognizer:singleTap];
+    
+    objc_setAssociatedObject(self, &addTagEvenBlockKey, block, OBJC_ASSOCIATION_COPY);
+    [self addTagEven:@selector(onClickTagBlock:) withTarget:self];
+}
+
+
+//点击view的除了textview和textfiled的地方就隐藏
+- (void)hideKeyboardWithOutTapTextFiledAndTextView:(NSArray *)views{
+    [self addTagEvenBlock:^(UIView *sender) {
+        if (![sender isKindOfClass:[UITextField class]] && ![sender isKindOfClass:[UITextView class]]) {
+            for (UIView *eachView in views) {
+                if ([eachView isKindOfClass:[UITextView class]]) {
+                    [((UITextView *)eachView) resignFirstResponder];
+                }else if ([eachView isKindOfClass:[UITextField class]]) {
+                    [((UITextField *)eachView) resignFirstResponder];
+                }
+            }
+        }
+    }];
+}
+
+- (void)onClickTagBlock:(UITapGestureRecognizer *)singleTap{
+    void (^block)(UIView *sender)  = objc_getAssociatedObject(self,&addTagEvenBlockKey);
+    if (block) {
+        block(singleTap.view);
+    }
+}
+
 #pragma mark Frame
 
 - (CGFloat)x

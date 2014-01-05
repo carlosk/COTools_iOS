@@ -19,6 +19,9 @@
 #import "NSData+CO.h"
 #import "UIImage+CO.h"
 #import "UITableView+CO.h"
+#import "UITextField+CO.h"
+#import "UITextView+CO.h"
+#import "UIControl+CO.h"
 
 @interface COCategory : NSObject
 

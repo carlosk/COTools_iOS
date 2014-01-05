@@ -9,10 +9,29 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (CO)
-//是否是空的
-- (BOOL)isEmpty;
-//是否是不为空的
-- (BOOL)isNotEmpty;
+
 //延迟调用block
 - (void)performBlock:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
+
+//只支持retain,如果是基本类型则写成NSNumber
+-(void)setCoObject:(id)obj;
+-(id)coObject;
+
+//存入一个block
+-(void)handlerDefaultEventWithBlock:(id)block;
+//获取一个block
+-(id)blockForDefaultEvent;
+-(void)handlerEventWithBlock:(id)block withIdentifier:(NSString *)identifier;
+-(id)blockForEventWithIdentifier:(NSString *)identifier;
+
+
+//=======================
+//跟上面的不同在于,这个的block可以接受多个形参
+//从一个block里接收到数据
+-(void)receiveObject:(void(^)(id object))sendObject;
+//发送数据到某个block
+-(void)sendObject:(id)object;
+-(void)receiveObject:(void(^)(id object))sendObject withIdentifier:(NSString *)identifier;
+-(void)sendObject:(id)object withIdentifier:(NSString *)identifier;
+
 @end
