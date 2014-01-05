@@ -10,4 +10,7 @@ Pod::Spec.new do |s|
   s.source_files = '*.{h,m,mm}','**/*.{h,m,mm}'
   s.requires_arc = true
   s.platform     = :ios
+      subspec "test" do |sp|
+        sp.source_files = "test"
+      end
 end
