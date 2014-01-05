@@ -117,10 +117,9 @@
         objc_property_t property = properties[i];
         NSString *key = [NSString stringWithFormat:@"%s",property_getName(property)];
         NSString *value = [self valueForKey:key];
-        if (i == outCount -1) {
-            [result appendFormat:@"%@=%@",key,value];
-        }else{
-            [result appendFormat:@"%@=%@,",key,value];
+        [result appendFormat:@"%@=%@",key,value];
+        if (i < outCount -1) {
+            [result appendString:@","];
         }
     }
     free (properties);

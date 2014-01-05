@@ -51,13 +51,15 @@
 		85124189187903EB000DDD44 /* COLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512415D187903EB000DDD44 /* COLogTool.m */; };
 		8512418A187903EB000DDD44 /* COPhoneTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512415F187903EB000DDD44 /* COPhoneTool.m */; };
 		8512418B187903EB000DDD44 /* TableViewDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124161187903EB000DDD44 /* TableViewDataHandler.m */; };
-		8512418C187903EB000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124163187903EB000DDD44 /* COTools.m */; };
 		8512418D187903EB000DDD44 /* COBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124166187903EB000DDD44 /* COBaseCell.m */; };
 		8512418E187903EB000DDD44 /* COBaseDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124168187903EB000DDD44 /* COBaseDomain.m */; };
 		8512418F187903EB000DDD44 /* COBaseV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416A187903EB000DDD44 /* COBaseV.m */; };
 		85124190187903EB000DDD44 /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416C187903EB000DDD44 /* COBaseVC.m */; };
 		85124191187903EB000DDD44 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		85124192187903EB000DDD44 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 85124170187903EB000DDD44 /* test */; };
+		8512419518794165000DDD44 /* COParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419418794165000DDD44 /* COParseTool.m */; };
+		8512419818794222000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
+		8512419B18794230000DDD44 /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F99BD25704F408090AA1DDB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -150,8 +152,6 @@
 		8512415F187903EB000DDD44 /* COPhoneTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPhoneTool.m; sourceTree = "<group>"; };
 		85124160187903EB000DDD44 /* TableViewDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataHandler.h; sourceTree = "<group>"; };
 		85124161187903EB000DDD44 /* TableViewDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataHandler.m; sourceTree = "<group>"; };
-		85124162187903EB000DDD44 /* COTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTools.h; sourceTree = "<group>"; };
-		85124163187903EB000DDD44 /* COTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTools.m; sourceTree = "<group>"; };
 		85124165187903EB000DDD44 /* COBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseCell.h; sourceTree = "<group>"; };
 		85124166187903EB000DDD44 /* COBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseCell.m; sourceTree = "<group>"; };
 		85124167187903EB000DDD44 /* COBaseDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseDomain.h; sourceTree = "<group>"; };
@@ -163,6 +163,12 @@
 		8512416E187903EB000DDD44 /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
 		8512416F187903EB000DDD44 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
 		85124170187903EB000DDD44 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
+		8512419318794165000DDD44 /* COParseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COParseTool.h; sourceTree = "<group>"; };
+		8512419418794165000DDD44 /* COParseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COParseTool.m; sourceTree = "<group>"; };
+		8512419618794222000DDD44 /* COTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTools.h; sourceTree = "<group>"; };
+		8512419718794222000DDD44 /* COTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTools.m; sourceTree = "<group>"; };
+		8512419918794230000DDD44 /* COUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COUtils.h; sourceTree = "<group>"; };
+		8512419A18794230000DDD44 /* COUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COUtils.m; sourceTree = "<group>"; };
 		9A49DFB699744A25B341B7A8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,10 +294,10 @@
 			children = (
 				8512412C187903EB000DDD44 /* COCategory */,
 				8512414D187903EB000DDD44 /* COTools */,
-				85124162187903EB000DDD44 /* COTools.h */,
-				85124163187903EB000DDD44 /* COTools.m */,
 				85124164187903EB000DDD44 /* COBase */,
 				8512416D187903EB000DDD44 /* Encryption */,
+				8512419918794230000DDD44 /* COUtils.h */,
+				8512419A18794230000DDD44 /* COUtils.m */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -338,6 +344,8 @@
 		8512414D187903EB000DDD44 /* COTools */ = {
 			isa = PBXGroup;
 			children = (
+				8512419618794222000DDD44 /* COTools.h */,
+				8512419718794222000DDD44 /* COTools.m */,
 				8512414E187903EB000DDD44 /* COAppTool.h */,
 				8512414F187903EB000DDD44 /* COAppTool.m */,
 				85124150187903EB000DDD44 /* COBaseTool.h */,
@@ -358,6 +366,8 @@
 				8512415F187903EB000DDD44 /* COPhoneTool.m */,
 				85124160187903EB000DDD44 /* TableViewDataHandler.h */,
 				85124161187903EB000DDD44 /* TableViewDataHandler.m */,
+				8512419318794165000DDD44 /* COParseTool.h */,
+				8512419418794165000DDD44 /* COParseTool.m */,
 			);
 			path = COTools;
 			sourceTree = "<group>";
@@ -530,9 +540,10 @@
 				8512417C187903EB000DDD44 /* UILabel+CO.m in Sources */,
 				8512418B187903EB000DDD44 /* TableViewDataHandler.m in Sources */,
 				85124190187903EB000DDD44 /* COBaseVC.m in Sources */,
-				8512418C187903EB000DDD44 /* COTools.m in Sources */,
 				85124176187903EB000DDD44 /* NSString+CO.m in Sources */,
 				85124188187903EB000DDD44 /* COImagePickerTool.m in Sources */,
+				8512419518794165000DDD44 /* COParseTool.m in Sources */,
+				8512419B18794230000DDD44 /* COUtils.m in Sources */,
 				85124186187903EB000DDD44 /* COCrashTool.m in Sources */,
 				85124127187903DE000DDD44 /* TestCell.m in Sources */,
 				85124181187903EB000DDD44 /* UIView+CO.m in Sources */,
@@ -557,6 +568,7 @@
 				85124183187903EB000DDD44 /* COBaseTool.m in Sources */,
 				8512418D187903EB000DDD44 /* COBaseCell.m in Sources */,
 				85124172187903EB000DDD44 /* COCategory.m in Sources */,
+				8512419818794222000DDD44 /* COTools.m in Sources */,
 				8512417D187903EB000DDD44 /* UIScrollView+CO.m in Sources */,
 				85124173187903EB000DDD44 /* NSData+CO.m in Sources */,
 			);

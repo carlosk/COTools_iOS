@@ -28,7 +28,7 @@
 }
 //Cell的高度 子类必须要实现。Cell的高度要在cell类里调整
 +(NSNumber * )getCellHeight:(id)item withIndexPath:(NSIndexPath *)indexPath{
-    return [NSNumber numberWithFloat:44.f];
+    return @(44.f);
 }
 //默认是屏幕的宽度
 +(float )getCellWidth{

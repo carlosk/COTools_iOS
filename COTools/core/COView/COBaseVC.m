@@ -52,9 +52,6 @@
         }
     }];
     [alert show];
-    
-    
-    //    [ViewUtils showAlertWithMsg:msg withEvent:onClickConfrim];
 }
 //取消和确定对话框显示提示信息
 - (void)alert2BtnMsg:(NSString *)msg withEvent:(BaseOnClickOne )onClickConfrim{

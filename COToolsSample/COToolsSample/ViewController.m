@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "TestCell.h"
-#import "COTools.h"
+#import "COUtils.h"
 #import "TestDomain.h"
 @interface ViewController ()<UITextViewDelegate,UITextFieldDelegate>
 @property(nonatomic,strong)UITableView  * mTableV;
@@ -55,9 +55,9 @@
 
     //domain的desp
     TestDomain *doamin = [[TestDomain alloc]init];
-    doamin.name = @"陈渊佑";
+    doamin.name = @"carlos";
     doamin.age = 123;
-    doamin.address = @"上海市闵行区万源路2158号弘毅大厦B座元聚科技有限公司技术部";
+    doamin.address = @"上海市test";
     CLog(@"%@",doamin);
 
     //测试数据存储
@@ -87,13 +87,13 @@
     
     //测试json domain的解析
     NSDictionary *dictTest = @{@"name":@"chen child",@"age":@(11),@"address":@"啊啊啊"};
-        NSDictionary *dictTest1 = @{@"name":@"chen",@"age":@(33),@"address":@"安师大发水电费",@"childDomain":dictTest};
+        NSDictionary *dictTest1 = @{@"name":@"chen",@"age":@"3311",@"address":@"安师大发水电费",@"childDomain":dictTest};
     TestDomain *testDomain = [[TestDomain alloc]initWithJson:dictTest1];
     CLog(@"testDomain = %@",testDomain);
 
     //检测textview的内容block
     self.contentTV.delegate = self;
-    [self.contentTV setMaxLength:3];
+//    [self.contentTV ];
 //    BOOL(^checkBlock)(NSString  *strNew,NSString *strOld) = ^BOOL (NSString  *strNew,NSString *strOld) {
 //        CLog(@"新的是%@,旧的是%@",strNew,strOld);
 //        return strNew.length < 4;
