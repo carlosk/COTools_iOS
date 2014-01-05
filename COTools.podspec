@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.subspec "core" do |core|
     core.source       = { :git => 'https://github.com/carlosk/COTools_iOS'}
-    core.source_files = '*.{h,m,mm}','**/*.{h,m,mm}'
+    core.source_files = 'core/*.{h,m,mm}','core/**/*.{h,m,mm}'
     core.requires_arc = true
     core.platform     = :ios
     core.dependency   'ReactiveCocoa'
