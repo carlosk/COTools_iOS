@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.subspec "test" do |test|
         test.source_files = "test"
-        test.dependency = "COTools/core"
+        test.dependency "COTools/core"
   end
 
 end
