@@ -12,4 +12,6 @@
 @property(nonatomic,strong)NSString  * name;
 @property(nonatomic,assign)int age;
 @property(nonatomic,strong)NSString  * address;
+@property(nonatomic,strong)TestDomain  * childDomain;
+
 @end

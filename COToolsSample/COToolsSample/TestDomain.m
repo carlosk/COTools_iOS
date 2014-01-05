@@ -10,4 +10,9 @@
 
 @implementation TestDomain
 
+
+
++ (Class )childDomainClass{
+    return [TestDomain class];
+}
 @end

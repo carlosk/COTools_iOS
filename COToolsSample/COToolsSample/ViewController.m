@@ -84,6 +84,13 @@
         CLog(@"%@",eachDomain);
 
     }
+    
+    //测试json domain的解析
+    NSDictionary *dictTest = @{@"name":@"chen child",@"age":@(11),@"address":@"啊啊啊"};
+        NSDictionary *dictTest1 = @{@"name":@"chen",@"age":@(33),@"address":@"安师大发水电费",@"childDomain":dictTest};
+    TestDomain *testDomain = [[TestDomain alloc]initWithJson:dictTest1];
+    CLog(@"testDomain = %@",testDomain);
+
     //检测textview的内容block
     self.contentTV.delegate = self;
     [self.contentTV setMaxLength:3];
