@@ -137,8 +137,8 @@ const char ZXObjectSingleObjectDictionary;
 
 }
 //获取获取一组对象
-+ (id)getArchiverArray:(Class )class{
-    return [self getArchiverData:class withKey:kNSArrayArchiverKey(class)];
++ (id)getArchiverArray:(Class )mClass{
+    return [self getArchiverData:mClass withKey:kNSArrayArchiverKey(mClass)];
 }
 
 + (BOOL)saveArchiverData:(id)data withKey:(NSString *)key{
@@ -150,16 +150,16 @@ const char ZXObjectSingleObjectDictionary;
     return success;
 }
 //获取一组对象
-+ (id)getArchiverData:(Class )class withKey:(NSString *)key{
++ (id)getArchiverData:(Class )mClass withKey:(NSString *)key{
     NSData*data1=[[NSData alloc]initWithContentsOfFile:[self archiverPath]];
     
     NSKeyedUnarchiver*unArchiver=[[NSKeyedUnarchiver alloc]initForReadingWithData:data1];
-    return [unArchiver decodeObjectOfClass:class forKey:key];
+    return [unArchiver decodeObjectOfClass:mClass forKey:key];
 }
 
 //获取一个对象,根据key
-+ (id)getArchiverOne:(Class )class{
-    return [self getArchiverData:class withKey:kOneArchiverKey(class)];
++ (id)getArchiverOne:(Class )mClass{
+    return [self getArchiverData:mClass withKey:kOneArchiverKey(mClass)];
 }
 //获取路径
 - (NSString *)archiverPath{

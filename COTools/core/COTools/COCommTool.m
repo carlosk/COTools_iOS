@@ -30,6 +30,7 @@
     for (i = 0; i < outCount; i++) {
         objc_property_t property = properties[i];
         NSString *key = [NSString stringWithFormat:@"%s",property_getName(property)];
+            char * test = property_getAttributes(property);
         id value = [json objectForKey:key];
         //如果value是array类型的，则解析成domain数组
         if ([value isKindOfClass:[NSArray class]] || [[[value class] description] isEqualToString:@"__NSCFArray"]) {

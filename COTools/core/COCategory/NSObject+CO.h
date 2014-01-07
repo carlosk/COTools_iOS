@@ -38,10 +38,10 @@
 //数据存储
 + (BOOL)saveArchiverOne:(id)domain;
 
-+ (id)getArchiverOne:(Class )class;
++ (id)getArchiverOne:(Class )mClass;
 
 //存储一组对象
-+ (BOOL)saveArchiverArray:(NSArray *)domains withClass:(Class )class;
++ (BOOL)saveArchiverArray:(NSArray *)domains withClass:(Class )mClass;
 //获取一组对象
-+ (id)getArchiverArray:(Class )class;
++ (id)getArchiverArray:(Class )mClass;
 @end

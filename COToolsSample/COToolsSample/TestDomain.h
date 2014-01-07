@@ -13,5 +13,8 @@
 @property(nonatomic,assign)float age;
 @property(nonatomic,strong)NSString  * address;
 @property(nonatomic,strong)TestDomain  * childDomain;
+@property(nonatomic,strong)NSArray  * tests;
+
+
 
 @end
