@@ -41,6 +41,7 @@
     return self;
     
 }
+
 //初始化
 -(TableViewDataHandler *)initWithItems:(NSMutableArray *)items withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
     self = [super init];

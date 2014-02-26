@@ -61,7 +61,44 @@
 		8512419818794222000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
 		8512419B18794230000DDD44 /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8512419D1879533F000DDD44 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8512419C1879533F000DDD44 /* Reveal.framework */; };
+		8535AF6A188FAE5500ED38EB /* JsonParseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AF69188FAE5500ED38EB /* JsonParseTest.m */; };
+		8535AFBB188FB64A00ED38EB /* COCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512412E187903EB000DDD44 /* COCategory.m */; };
+		8535AFBC188FB64A00ED38EB /* NSData+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124130187903EB000DDD44 /* NSData+CO.m */; };
+		8535AFBD188FB64A00ED38EB /* NSDate+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124132187903EB000DDD44 /* NSDate+CO.m */; };
+		8535AFBE188FB64A00ED38EB /* NSObject+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124134187903EB000DDD44 /* NSObject+CO.m */; };
+		8535AFBF188FB64A00ED38EB /* NSString+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124136187903EB000DDD44 /* NSString+CO.m */; };
+		8535AFC0188FB64A00ED38EB /* UIButton+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124138187903EB000DDD44 /* UIButton+CO.m */; };
+		8535AFC1188FB64A00ED38EB /* UIColor+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512413A187903EB000DDD44 /* UIColor+CO.m */; };
+		8535AFC2188FB64A00ED38EB /* UIControl+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512413C187903EB000DDD44 /* UIControl+CO.m */; };
+		8535AFC3188FB64A00ED38EB /* UIDevice+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512413E187903EB000DDD44 /* UIDevice+CO.m */; };
+		8535AFC4188FB64A00ED38EB /* UIImage+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124140187903EB000DDD44 /* UIImage+CO.m */; };
+		8535AFC5188FB64A00ED38EB /* UILabel+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124142187903EB000DDD44 /* UILabel+CO.m */; };
+		8535AFC6188FB64A00ED38EB /* UIScrollView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124144187903EB000DDD44 /* UIScrollView+CO.m */; };
+		8535AFC7188FB64A00ED38EB /* UITableView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124146187903EB000DDD44 /* UITableView+CO.m */; };
+		8535AFC8188FB64A00ED38EB /* UITextField+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124148187903EB000DDD44 /* UITextField+CO.m */; };
+		8535AFC9188FB64A00ED38EB /* UITextView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512414A187903EB000DDD44 /* UITextView+CO.m */; };
+		8535AFCA188FB64A00ED38EB /* UIView+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512414C187903EB000DDD44 /* UIView+CO.m */; };
+		8535AFCB188FB64A00ED38EB /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
+		8535AFCC188FB64A00ED38EB /* COAppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512414F187903EB000DDD44 /* COAppTool.m */; };
+		8535AFCD188FB64A00ED38EB /* COBaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124151187903EB000DDD44 /* COBaseTool.m */; };
+		8535AFCE188FB64A00ED38EB /* COBlockTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124153187903EB000DDD44 /* COBlockTool.m */; };
+		8535AFCF188FB64A00ED38EB /* COCommTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124155187903EB000DDD44 /* COCommTool.m */; };
+		8535AFD0188FB64A00ED38EB /* COCrashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124157187903EB000DDD44 /* COCrashTool.m */; };
+		8535AFD1188FB64A00ED38EB /* CODefineTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124159187903EB000DDD44 /* CODefineTool.m */; };
+		8535AFD2188FB64A00ED38EB /* COImagePickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512415B187903EB000DDD44 /* COImagePickerTool.m */; };
+		8535AFD3188FB64A00ED38EB /* COLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512415D187903EB000DDD44 /* COLogTool.m */; };
+		8535AFD4188FB64A00ED38EB /* COPhoneTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512415F187903EB000DDD44 /* COPhoneTool.m */; };
+		8535AFD5188FB64A00ED38EB /* TableViewDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124161187903EB000DDD44 /* TableViewDataHandler.m */; };
+		8535AFD6188FB64A00ED38EB /* COParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419418794165000DDD44 /* COParseTool.m */; };
+		8535AFD7188FB64A00ED38EB /* COBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124166187903EB000DDD44 /* COBaseCell.m */; };
+		8535AFD8188FB64A00ED38EB /* COBaseDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124168187903EB000DDD44 /* COBaseDomain.m */; };
+		8535AFD9188FB64A00ED38EB /* COBaseV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416A187903EB000DDD44 /* COBaseV.m */; };
+		8535AFDA188FB64A00ED38EB /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416C187903EB000DDD44 /* COBaseVC.m */; };
+		8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
+		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
+		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
 		B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F99BD25704F408090AA1DDB /* libPods.a */; };
+		E4AF28E617A14A1D8BFE6DA7 /* libPods-COToolsSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +112,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COToolsSampleTests.xcconfig"; path = "Pods/Pods-COToolsSampleTests.xcconfig"; sourceTree = "<group>"; };
 		4F99BD25704F408090AA1DDB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		851240E918790365000DDD44 /* COToolsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COToolsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851240EC18790365000DDD44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -171,6 +209,11 @@
 		8512419918794230000DDD44 /* COUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COUtils.h; sourceTree = "<group>"; };
 		8512419A18794230000DDD44 /* COUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COUtils.m; sourceTree = "<group>"; };
 		8512419C1879533F000DDD44 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		8535AF69188FAE5500ED38EB /* JsonParseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParseTest.m; sourceTree = "<group>"; };
+		8535AFAF188FB28A00ED38EB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		8535AFB0188FB28A00ED38EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		8535AFB2188FB38700ED38EB /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COToolsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A49DFB699744A25B341B7A8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +237,7 @@
 				8512410C18790365000DDD44 /* XCTest.framework in Frameworks */,
 				8512410E18790365000DDD44 /* UIKit.framework in Frameworks */,
 				8512410D18790365000DDD44 /* Foundation.framework in Frameworks */,
+				E4AF28E617A14A1D8BFE6DA7 /* libPods-COToolsSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +252,7 @@
 				851240EB18790365000DDD44 /* Frameworks */,
 				851240EA18790365000DDD44 /* Products */,
 				9A49DFB699744A25B341B7A8 /* Pods.xcconfig */,
+				0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,12 +268,14 @@
 		851240EB18790365000DDD44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8535AFB2188FB38700ED38EB /* libPods.a */,
 				8512419C1879533F000DDD44 /* Reveal.framework */,
 				851240EC18790365000DDD44 /* Foundation.framework */,
 				851240EE18790365000DDD44 /* CoreGraphics.framework */,
 				851240F018790365000DDD44 /* UIKit.framework */,
 				8512410B18790365000DDD44 /* XCTest.framework */,
 				4F99BD25704F408090AA1DDB /* libPods.a */,
+				8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +315,7 @@
 		8512411118790365000DDD44 /* COToolsSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				8535AF68188FAE2700ED38EB /* COToolCateTest */,
 				8512411718790365000DDD44 /* COToolsSampleTests.m */,
 				8512411218790365000DDD44 /* Supporting Files */,
 			);
@@ -401,6 +449,16 @@
 			path = Encryption;
 			sourceTree = "<group>";
 		};
+		8535AF68188FAE2700ED38EB /* COToolCateTest */ = {
+			isa = PBXGroup;
+			children = (
+				8535AF69188FAE5500ED38EB /* JsonParseTest.m */,
+				8535AFAF188FB28A00ED38EB /* User.h */,
+				8535AFB0188FB28A00ED38EB /* User.m */,
+			);
+			path = COToolCateTest;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -427,9 +485,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8512411E18790365000DDD44 /* Build configuration list for PBXNativeTarget "COToolsSampleTests" */;
 			buildPhases = (
+				4DCEB921DC2F4BF694390339 /* Check Pods Manifest.lock */,
 				8512410618790365000DDD44 /* Sources */,
 				8512410718790365000DDD44 /* Frameworks */,
 				8512410818790365000DDD44 /* Resources */,
+				C25013603F634BB0AAEC7223 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +559,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4DCEB921DC2F4BF694390339 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		892090CDBCED48DAAAE17347 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,6 +602,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C25013603F634BB0AAEC7223 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-COToolsSampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -582,7 +672,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8535AFDD188FB69800ED38EB /* User.m in Sources */,
+				8535AFBB188FB64A00ED38EB /* COCategory.m in Sources */,
+				8535AFBC188FB64A00ED38EB /* NSData+CO.m in Sources */,
+				8535AFBD188FB64A00ED38EB /* NSDate+CO.m in Sources */,
+				8535AFBE188FB64A00ED38EB /* NSObject+CO.m in Sources */,
+				8535AFBF188FB64A00ED38EB /* NSString+CO.m in Sources */,
+				8535AFC0188FB64A00ED38EB /* UIButton+CO.m in Sources */,
+				8535AFC1188FB64A00ED38EB /* UIColor+CO.m in Sources */,
+				8535AFC2188FB64A00ED38EB /* UIControl+CO.m in Sources */,
+				8535AFC3188FB64A00ED38EB /* UIDevice+CO.m in Sources */,
+				8535AFC4188FB64A00ED38EB /* UIImage+CO.m in Sources */,
+				8535AFC5188FB64A00ED38EB /* UILabel+CO.m in Sources */,
+				8535AFC6188FB64A00ED38EB /* UIScrollView+CO.m in Sources */,
+				8535AFC7188FB64A00ED38EB /* UITableView+CO.m in Sources */,
+				8535AFC8188FB64A00ED38EB /* UITextField+CO.m in Sources */,
+				8535AFC9188FB64A00ED38EB /* UITextView+CO.m in Sources */,
+				8535AFCA188FB64A00ED38EB /* UIView+CO.m in Sources */,
+				8535AFCB188FB64A00ED38EB /* COTools.m in Sources */,
+				8535AFCC188FB64A00ED38EB /* COAppTool.m in Sources */,
+				8535AFCD188FB64A00ED38EB /* COBaseTool.m in Sources */,
+				8535AFCE188FB64A00ED38EB /* COBlockTool.m in Sources */,
+				8535AFCF188FB64A00ED38EB /* COCommTool.m in Sources */,
+				8535AFD0188FB64A00ED38EB /* COCrashTool.m in Sources */,
+				8535AFD1188FB64A00ED38EB /* CODefineTool.m in Sources */,
+				8535AFD2188FB64A00ED38EB /* COImagePickerTool.m in Sources */,
+				8535AFD3188FB64A00ED38EB /* COLogTool.m in Sources */,
+				8535AFD4188FB64A00ED38EB /* COPhoneTool.m in Sources */,
+				8535AFD5188FB64A00ED38EB /* TableViewDataHandler.m in Sources */,
+				8535AFD6188FB64A00ED38EB /* COParseTool.m in Sources */,
+				8535AFD7188FB64A00ED38EB /* COBaseCell.m in Sources */,
+				8535AFD8188FB64A00ED38EB /* COBaseDomain.m in Sources */,
+				8535AFD9188FB64A00ED38EB /* COBaseV.m in Sources */,
+				8535AFDA188FB64A00ED38EB /* COBaseVC.m in Sources */,
+				8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */,
+				8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */,
 				8512411818790365000DDD44 /* COToolsSampleTests.m in Sources */,
+				8535AF6A188FAE5500ED38EB /* JsonParseTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +862,7 @@
 		};
 		8512411F18790365000DDD44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COToolsSample.app/COToolsSample";
@@ -750,6 +877,13 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/DeveloperTools/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers\"",
+				);
 				INFOPLIST_FILE = "COToolsSampleTests/COToolsSampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -759,6 +893,7 @@
 		};
 		8512412018790365000DDD44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COToolsSample.app/COToolsSample";
@@ -769,6 +904,13 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "COToolsSample/COToolsSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/DeveloperTools/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers/ReactiveCocoa/ReactiveCocoa\"",
+					"\"${PODS_ROOT}/Headers\"",
+				);
 				INFOPLIST_FILE = "COToolsSampleTests/COToolsSampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

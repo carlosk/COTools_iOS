@@ -62,8 +62,8 @@
                     [COCommTool fillObject:domainObj withJSONDict:value];
                     [object setValue:domainObj forKey:key];
                 }
-            }
-        if (value && ![object valueForKey:key]) {
+            }else
+        if (value) {
             [object setValue:value forKey:key];
         }
     }
