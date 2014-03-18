@@ -1,6 +1,7 @@
 platform :ios, '5.0'
 pod 'ReactiveCocoa'
-
+pod 'Base64'
+#pod 'Reveal-iOS-SDK'
 target :COToolsSampleTests do
     pod 'ReactiveCocoa'
 end

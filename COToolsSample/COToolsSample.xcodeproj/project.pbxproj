@@ -60,7 +60,6 @@
 		8512419518794165000DDD44 /* COParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419418794165000DDD44 /* COParseTool.m */; };
 		8512419818794222000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
 		8512419B18794230000DDD44 /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
-		8512419D1879533F000DDD44 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8512419C1879533F000DDD44 /* Reveal.framework */; };
 		8535AF6A188FAE5500ED38EB /* JsonParseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AF69188FAE5500ED38EB /* JsonParseTest.m */; };
 		8535AFBB188FB64A00ED38EB /* COCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512412E187903EB000DDD44 /* COCategory.m */; };
 		8535AFBC188FB64A00ED38EB /* NSData+CO.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124130187903EB000DDD44 /* NSData+CO.m */; };
@@ -97,6 +96,12 @@
 		8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
+		85BF987A18C56B7700185684 /* Test01.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987918C56B7700185684 /* Test01.m */; };
+		85BF987D18C56D7100185684 /* FruitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987C18C56D7100185684 /* FruitCell.m */; };
+		85BF987F18C56D7E00185684 /* FruitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85BF987E18C56D7E00185684 /* FruitCell.xib */; };
+		85BF988218C56E2B00185684 /* FruitDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF988118C56E2B00185684 /* FruitDomain.m */; };
+		85BF988418C5702A00185684 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BF988318C5702A00185684 /* CFNetwork.framework */; };
+		85FA536B18CEA7E70037E9B5 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FA536A18CEA7E70037E9B5 /* Reveal.framework */; };
 		B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F99BD25704F408090AA1DDB /* libPods.a */; };
 		E4AF28E617A14A1D8BFE6DA7 /* libPods-COToolsSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */; };
 /* End PBXBuildFile section */
@@ -208,12 +213,20 @@
 		8512419718794222000DDD44 /* COTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTools.m; sourceTree = "<group>"; };
 		8512419918794230000DDD44 /* COUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COUtils.h; sourceTree = "<group>"; };
 		8512419A18794230000DDD44 /* COUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COUtils.m; sourceTree = "<group>"; };
-		8512419C1879533F000DDD44 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		8535AF69188FAE5500ED38EB /* JsonParseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParseTest.m; sourceTree = "<group>"; };
 		8535AFAF188FB28A00ED38EB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8535AFB0188FB28A00ED38EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8535AFB2188FB38700ED38EB /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COToolsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BF987818C56B7700185684 /* Test01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test01.h; sourceTree = "<group>"; };
+		85BF987918C56B7700185684 /* Test01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test01.m; sourceTree = "<group>"; };
+		85BF987B18C56D7100185684 /* FruitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitCell.h; sourceTree = "<group>"; };
+		85BF987C18C56D7100185684 /* FruitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitCell.m; sourceTree = "<group>"; };
+		85BF987E18C56D7E00185684 /* FruitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FruitCell.xib; sourceTree = "<group>"; };
+		85BF988018C56E2B00185684 /* FruitDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitDomain.h; sourceTree = "<group>"; };
+		85BF988118C56E2B00185684 /* FruitDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FruitDomain.m; sourceTree = "<group>"; };
+		85BF988318C5702A00185684 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		85FA536A18CEA7E70037E9B5 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		9A49DFB699744A25B341B7A8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,9 +235,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85BF988418C5702A00185684 /* CFNetwork.framework in Frameworks */,
 				851240EF18790365000DDD44 /* CoreGraphics.framework in Frameworks */,
 				851240F118790365000DDD44 /* UIKit.framework in Frameworks */,
-				8512419D1879533F000DDD44 /* Reveal.framework in Frameworks */,
+				85FA536B18CEA7E70037E9B5 /* Reveal.framework in Frameworks */,
 				851240ED18790365000DDD44 /* Foundation.framework in Frameworks */,
 				B2D8A171E33040E9AD83CD58 /* libPods.a in Frameworks */,
 			);
@@ -268,8 +282,9 @@
 		851240EB18790365000DDD44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85FA536A18CEA7E70037E9B5 /* Reveal.framework */,
+				85BF988318C5702A00185684 /* CFNetwork.framework */,
 				8535AFB2188FB38700ED38EB /* libPods.a */,
-				8512419C1879533F000DDD44 /* Reveal.framework */,
 				851240EC18790365000DDD44 /* Foundation.framework */,
 				851240EE18790365000DDD44 /* CoreGraphics.framework */,
 				851240F018790365000DDD44 /* UIKit.framework */,
@@ -297,6 +312,13 @@
 				8512410218790365000DDD44 /* ViewController.m */,
 				8512410418790365000DDD44 /* Images.xcassets */,
 				851240F318790365000DDD44 /* Supporting Files */,
+				85BF987818C56B7700185684 /* Test01.h */,
+				85BF987918C56B7700185684 /* Test01.m */,
+				85BF987B18C56D7100185684 /* FruitCell.h */,
+				85BF987C18C56D7100185684 /* FruitCell.m */,
+				85BF987E18C56D7E00185684 /* FruitCell.xib */,
+				85BF988018C56E2B00185684 /* FruitDomain.h */,
+				85BF988118C56E2B00185684 /* FruitDomain.m */,
 			);
 			path = COToolsSample;
 			sourceTree = "<group>";
@@ -545,6 +567,7 @@
 				851240F718790365000DDD44 /* InfoPlist.strings in Resources */,
 				8512410018790365000DDD44 /* Main.storyboard in Resources */,
 				85124171187903EB000DDD44 /* COTools.podspec in Resources */,
+				85BF987F18C56D7E00185684 /* FruitCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +651,7 @@
 			files = (
 				85124185187903EB000DDD44 /* COCommTool.m in Sources */,
 				8512410318790365000DDD44 /* ViewController.m in Sources */,
+				85BF988218C56E2B00185684 /* FruitDomain.m in Sources */,
 				85124180187903EB000DDD44 /* UITextView+CO.m in Sources */,
 				8512417E187903EB000DDD44 /* UITableView+CO.m in Sources */,
 				8512417A187903EB000DDD44 /* UIDevice+CO.m in Sources */,
@@ -662,8 +686,10 @@
 				85124183187903EB000DDD44 /* COBaseTool.m in Sources */,
 				8512418D187903EB000DDD44 /* COBaseCell.m in Sources */,
 				85124172187903EB000DDD44 /* COCategory.m in Sources */,
+				85BF987A18C56B7700185684 /* Test01.m in Sources */,
 				8512419818794222000DDD44 /* COTools.m in Sources */,
 				8512417D187903EB000DDD44 /* UIScrollView+CO.m in Sources */,
+				85BF987D18C56D7100185684 /* FruitCell.m in Sources */,
 				85124173187903EB000DDD44 /* NSData+CO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +857,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/carlosk/Desktop/workspace/01IOSCode/09MyFramework/COTools/COToolsSample,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "COToolsSample/COToolsSample-Prefix.pch";
@@ -850,6 +877,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/carlosk/Desktop/workspace/01IOSCode/09MyFramework/COTools/COToolsSample,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "COToolsSample/COToolsSample-Prefix.pch";

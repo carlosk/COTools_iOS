@@ -25,6 +25,16 @@
     NSString *test = @"";
     XCTAssertNotNil(test, @"this is nil");
 }
+
+- (void)testNSLog{
+    long currentTime = [NSDate date].timeIntervalSince1970;
+    int size = 100000;
+    for (int i = 0; i < size; i++) {
+        NSLog(@"%d",i);
+    }
+    long cha = [NSDate date].timeIntervalSince1970 - currentTime;
+    NSLog(@"时间差为%ld",cha);
+}
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.

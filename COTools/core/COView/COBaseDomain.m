@@ -38,7 +38,7 @@
                     if ([[self class] respondsToSelector:classSel]) {
                         Class arrClass = [[self class] performSelector:classSel];
                         for (NSDictionary *dicValue in value) {
-                            id arrayObj = [[arrClass alloc] initWithJson:value];
+                            id arrayObj = [[arrClass alloc] initWithJson:dicValue];
                             [selfArr addObject:arrayObj];
                         }
                         if (selfArr.count) {

@@ -144,7 +144,10 @@ static CGSize kbSize;//这是键盘的显示出来的size
         }
     }
     CGPoint scrollPoint = CGPointMake(0.0, kbSize.height-(scrollView.frame.size.height - focusView.frame.origin.y - focusView.frame.size.height) + 10);
-    [scrollView setContentOffset:scrollPoint animated:YES];
+    
+    if (scrollPoint.y >0) {
+        [scrollView setContentOffset:scrollPoint animated:YES];
+    }
 }
 //在键盘消失的通知处理事件中，简单的将UIScrollView恢复即可
 + (void)keyboardWillBeHidden:(NSNotification*)aNotification

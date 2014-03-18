@@ -16,4 +16,7 @@
 + (UIColor *)colorWithRGBHex:(UInt32)hex;
 
 + (UIColor *)colorWithRGBHex:(UInt32)hex alpha:(CGFloat)alpha;
+
+//根据字符串创建Color,比如d16c11
++(UIColor *)createColorWithString:(NSString *)colorStr;
 @end
