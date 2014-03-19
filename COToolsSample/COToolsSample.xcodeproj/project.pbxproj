@@ -96,6 +96,7 @@
 		8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
+		85A5986218D99FB600BF9365 /* COPListTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A5986118D99FB600BF9365 /* COPListTool.m */; };
 		85BF987A18C56B7700185684 /* Test01.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987918C56B7700185684 /* Test01.m */; };
 		85BF987D18C56D7100185684 /* FruitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987C18C56D7100185684 /* FruitCell.m */; };
 		85BF987F18C56D7E00185684 /* FruitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85BF987E18C56D7E00185684 /* FruitCell.xib */; };
@@ -218,6 +219,8 @@
 		8535AFB0188FB28A00ED38EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8535AFB2188FB38700ED38EB /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COToolsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A5986018D99FB600BF9365 /* COPListTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPListTool.h; sourceTree = "<group>"; };
+		85A5986118D99FB600BF9365 /* COPListTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPListTool.m; sourceTree = "<group>"; };
 		85BF987818C56B7700185684 /* Test01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test01.h; sourceTree = "<group>"; };
 		85BF987918C56B7700185684 /* Test01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test01.m; sourceTree = "<group>"; };
 		85BF987B18C56D7100185684 /* FruitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FruitCell.h; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 				85124161187903EB000DDD44 /* TableViewDataHandler.m */,
 				8512419318794165000DDD44 /* COParseTool.h */,
 				8512419418794165000DDD44 /* COParseTool.m */,
+				85A5986018D99FB600BF9365 /* COPListTool.h */,
+				85A5986118D99FB600BF9365 /* COPListTool.m */,
 			);
 			path = COTools;
 			sourceTree = "<group>";
@@ -681,6 +686,7 @@
 				8512418E187903EB000DDD44 /* COBaseDomain.m in Sources */,
 				8512417F187903EB000DDD44 /* UITextField+CO.m in Sources */,
 				85124178187903EB000DDD44 /* UIColor+CO.m in Sources */,
+				85A5986218D99FB600BF9365 /* COPListTool.m in Sources */,
 				85124179187903EB000DDD44 /* UIControl+CO.m in Sources */,
 				85124184187903EB000DDD44 /* COBlockTool.m in Sources */,
 				85124183187903EB000DDD44 /* COBaseTool.m in Sources */,
