@@ -48,6 +48,12 @@
 #define kWBack @"返回"
 #define kWConfrim @"确定"
 
+
+#define NotifyRemove(o) [[NSNotificationCenter defaultCenter] removeObserver:o];
+#define NotifyAdd(notifyName,function)         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(function) name:notifyName object:nil];
+
+#define NotifyPost(nofityName,mObject)         [[NSNotificationCenter defaultCenter] postNotificationName:nofityName object:mObject];
+
 @interface CODefineTool : COBaseTool
 
 @end
