@@ -18,7 +18,7 @@
 
 //根据plist文件名 存入数据
 +(void)setByFileName:(NSString *)fileName WithKey:(NSString *)key withValue:(id)value{
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:pListName ofType:@"plist"];
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"plist"];
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
     data[key] = value;
 }
