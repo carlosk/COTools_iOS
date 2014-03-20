@@ -17,6 +17,7 @@
 #import "COImagePickerTool.h"
 #import "CODefineTool.h"
 #import "COParseTool.h"
+#import "COPListTool.h"
 @interface COTools : NSObject
 
 @end
