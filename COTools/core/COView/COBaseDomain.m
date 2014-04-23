@@ -15,13 +15,21 @@
     if (!self) {
         return self;
     }
-    
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
     if (![json isKindOfClass:[NSDictionary class]]) {
         return self;
     }
     Class mClass1 = [self class];
+    [self parseWithClass:mClass1 withJsonContent:json];
+
+    
+    return self;
+}
+
+- (void)parseWithClass:(Class )mClass1 withJsonContent:(NSDictionary *)json{
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     unsigned int outCount, i;
     objc_property_t *properties = class_copyPropertyList(mClass1, &outCount);
     for (i = 0; i < outCount; i++) {
@@ -59,17 +67,16 @@
                     [self setValue:domainObj forKey:key];
                 }
             }else
-        if (value) {
-            [self setValue:value forKey:key];
-        }
+                if (value) {
+                    [self setValue:value forKey:key];
+                }
     }
     free (properties);
-#pragma clang diagnostic pop
 
-    
-//    [COCommTool fillself:self withJSONDict:json];
-    
-    return self;
+    if ([mClass1 superclass]) {
+        [self parseWithClass:[mClass1 superclass] withJsonContent:json];
+    }
+#pragma clang diagnostic pop
 }
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {

@@ -62,7 +62,7 @@ static char base64[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
 {
     NSMutableString *dest = [[NSMutableString alloc] initWithString:@""];
     unsigned char * working = (unsigned char *)[self bytes];
-    int srcLen = [self length];
+    int srcLen = (int)[self length];
     for (int i=0; i<srcLen; i += 3) {
         for (int nib=0; nib<4; nib++) {
             int byt = (nib == 0)?0:nib-1;
@@ -81,7 +81,7 @@ static char base64[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123
     if ([str length] == 0)
         return @"";
     const char *source = [str UTF8String];
-    int strlength  = strlen(source);
+    int strlength  = (int)strlen(source);
     char *characters = malloc(((strlength + 2) / 3) * 4);
     if (characters == NULL)
         return nil;

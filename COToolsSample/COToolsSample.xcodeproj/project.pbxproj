@@ -96,6 +96,7 @@
 		8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
+		8586BBAE19081DEE0036CCA8 /* BaseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8586BBAD19081DEE0036CCA8 /* BaseUser.m */; };
 		85A5986218D99FB600BF9365 /* COPListTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A5986118D99FB600BF9365 /* COPListTool.m */; };
 		85BF987A18C56B7700185684 /* Test01.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987918C56B7700185684 /* Test01.m */; };
 		85BF987D18C56D7100185684 /* FruitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987C18C56D7100185684 /* FruitCell.m */; };
@@ -219,6 +220,8 @@
 		8535AFB0188FB28A00ED38EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8535AFB2188FB38700ED38EB /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COToolsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8586BBAC19081DEE0036CCA8 /* BaseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUser.h; sourceTree = "<group>"; };
+		8586BBAD19081DEE0036CCA8 /* BaseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUser.m; sourceTree = "<group>"; };
 		85A5986018D99FB600BF9365 /* COPListTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COPListTool.h; sourceTree = "<group>"; };
 		85A5986118D99FB600BF9365 /* COPListTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COPListTool.m; sourceTree = "<group>"; };
 		85BF987818C56B7700185684 /* Test01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test01.h; sourceTree = "<group>"; };
@@ -482,6 +485,8 @@
 				8535AF69188FAE5500ED38EB /* JsonParseTest.m */,
 				8535AFAF188FB28A00ED38EB /* User.h */,
 				8535AFB0188FB28A00ED38EB /* User.m */,
+				8586BBAC19081DEE0036CCA8 /* BaseUser.h */,
+				8586BBAD19081DEE0036CCA8 /* BaseUser.m */,
 			);
 			path = COToolCateTest;
 			sourceTree = "<group>";
@@ -534,7 +539,7 @@
 		851240E118790365000DDD44 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = carlosk;
 				TargetAttributes = {
 					8512410918790365000DDD44 = {
@@ -707,6 +712,7 @@
 				8535AFDD188FB69800ED38EB /* User.m in Sources */,
 				8535AFBB188FB64A00ED38EB /* COCategory.m in Sources */,
 				8535AFBC188FB64A00ED38EB /* NSData+CO.m in Sources */,
+				8586BBAE19081DEE0036CCA8 /* BaseUser.m in Sources */,
 				8535AFBD188FB64A00ED38EB /* NSDate+CO.m in Sources */,
 				8535AFBE188FB64A00ED38EB /* NSObject+CO.m in Sources */,
 				8535AFBF188FB64A00ED38EB /* NSString+CO.m in Sources */,
@@ -786,7 +792,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -825,7 +830,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -898,7 +902,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COToolsSample.app/COToolsSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -929,7 +932,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F6A7D6589DD458F97453C94 /* Pods-COToolsSampleTests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/COToolsSample.app/COToolsSample";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

@@ -103,7 +103,7 @@
         return strNew.length < 4;
 //        return YES;
     };
-    NSMutableArray *a = nil;
+//    NSMutableArray *a = nil;
 
     [self.contentTV setCheckEditContentBlock:checkBlock];
 //    int maxLength = 2;

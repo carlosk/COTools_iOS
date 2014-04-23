@@ -40,19 +40,6 @@
     return [self createWithXib:className];
 }
 
-//把所有的子View加在父View里
--(void) addSubVs:(UIView *)object, ...
-{
-    va_list argp = NULL;
-    va_start(argp, object);
-    UIView *tempObject = nil;
-    tempObject = object;
-    while(tempObject != nil){
-        [self addSubview:tempObject];
-        tempObject = va_arg(argp, UIView *);
-    }
-    va_end(argp);
-}
 
 //给view添加按键事件
 -(void) addTagEven:(SEL) mSel withTarget:(id)target{

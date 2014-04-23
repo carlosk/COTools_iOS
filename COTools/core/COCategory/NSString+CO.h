@@ -18,11 +18,6 @@
 
 - (BOOL) equalsIgnoreCase:(NSString*) anotherString;
 
-
-- (int) lastIndexOfString:(NSString*)str;
-
-- (int) lastIndexOfString:(NSString*)str fromIndex:(int)index;
-
 - (NSString *) substringFromIndex:(int)beginIndex toIndex:(int)endIndex;
 
 - (NSString *) toLowerCase;

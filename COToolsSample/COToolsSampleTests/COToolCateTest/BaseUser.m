@@ -1,14 +1,13 @@
 //
-//  User.h
+//  BaseUser.m
 //  COToolsSample
 //
-//  Created by carlos on 14-1-22.
+//  Created by carlos on 14-4-24.
 //  Copyright (c) 2014年 carlosk. All rights reserved.
 //
 
 #import "BaseUser.h"
 
-@interface User : BaseUser
-@property(nonatomic,assign)int age;
+@implementation BaseUser
 
 @end

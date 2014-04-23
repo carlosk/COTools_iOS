@@ -27,9 +27,6 @@
 //根据Xib文件创建View
 +(id) createWithXib;
 
-//用于添加多个子View加到本View里
--(void) addSubVs:(UIView *)object, ...;
-
 //给view添加按键事件
 -(void) addTagEven:(SEL) mSel withTarget:(id)target;
 //添加view的tag事件到block上

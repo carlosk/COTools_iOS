@@ -29,24 +29,6 @@
     return [[self toLowerCase] equals:[anotherString toLowerCase]];
 }
 
-
-- (int) lastIndexOfString:(NSString*)str {
-    NSRange range = [self rangeOfString:str options:NSBackwardsSearch];
-    if (range.location == NSNotFound) {
-        return JavaNotFound;
-    }
-    return range.location;
-}
-
-- (int) lastIndexOfString:(NSString*)str fromIndex:(int)index {
-    NSRange fromRange = NSMakeRange(0, index);
-    NSRange range = [self rangeOfString:str options:NSBackwardsSearch range:fromRange];
-    if (range.location == NSNotFound) {
-        return JavaNotFound;
-    }
-    return range.location;
-}
-
 - (NSString *) substringFromIndex:(int)beginIndex toIndex:(int)endIndex {
     if (endIndex <= beginIndex) {
         return @"";
@@ -78,7 +60,7 @@
 -(NSString *)md5{
     const char *original_str = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(original_str, strlen(original_str), result);
+    CC_MD5(original_str, (int)strlen(original_str), result);
     NSMutableString *hash = [NSMutableString string];
     for (int i = 0; i < 16; i++)
         [hash appendFormat:@"%02X", result[i]];
