@@ -10,4 +10,8 @@
 
 @implementation User
 
+
++ (NSString *)addressKey{
+    return @"aaddress";
+}
 @end

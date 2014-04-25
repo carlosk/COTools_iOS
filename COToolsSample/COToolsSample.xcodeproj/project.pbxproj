@@ -55,7 +55,6 @@
 		8512418E187903EB000DDD44 /* COBaseDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124168187903EB000DDD44 /* COBaseDomain.m */; };
 		8512418F187903EB000DDD44 /* COBaseV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416A187903EB000DDD44 /* COBaseV.m */; };
 		85124190187903EB000DDD44 /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416C187903EB000DDD44 /* COBaseVC.m */; };
-		85124191187903EB000DDD44 /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		85124192187903EB000DDD44 /* test in Resources */ = {isa = PBXBuildFile; fileRef = 85124170187903EB000DDD44 /* test */; };
 		8512419518794165000DDD44 /* COParseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419418794165000DDD44 /* COParseTool.m */; };
 		8512419818794222000DDD44 /* COTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419718794222000DDD44 /* COTools.m */; };
@@ -93,7 +92,6 @@
 		8535AFD8188FB64A00ED38EB /* COBaseDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 85124168187903EB000DDD44 /* COBaseDomain.m */; };
 		8535AFD9188FB64A00ED38EB /* COBaseV.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416A187903EB000DDD44 /* COBaseV.m */; };
 		8535AFDA188FB64A00ED38EB /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416C187903EB000DDD44 /* COBaseVC.m */; };
-		8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416F187903EB000DDD44 /* Encryption.m */; };
 		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
 		8586BBAE19081DEE0036CCA8 /* BaseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8586BBAD19081DEE0036CCA8 /* BaseUser.m */; };
@@ -206,8 +204,6 @@
 		8512416A187903EB000DDD44 /* COBaseV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseV.m; sourceTree = "<group>"; };
 		8512416B187903EB000DDD44 /* COBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COBaseVC.h; sourceTree = "<group>"; };
 		8512416C187903EB000DDD44 /* COBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COBaseVC.m; sourceTree = "<group>"; };
-		8512416E187903EB000DDD44 /* Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encryption.h; sourceTree = "<group>"; };
-		8512416F187903EB000DDD44 /* Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Encryption.m; sourceTree = "<group>"; };
 		85124170187903EB000DDD44 /* test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test; sourceTree = "<group>"; };
 		8512419318794165000DDD44 /* COParseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COParseTool.h; sourceTree = "<group>"; };
 		8512419418794165000DDD44 /* COParseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COParseTool.m; sourceTree = "<group>"; };
@@ -375,7 +371,6 @@
 				8512412C187903EB000DDD44 /* COCategory */,
 				8512414D187903EB000DDD44 /* COTools */,
 				85124164187903EB000DDD44 /* COBase */,
-				8512416D187903EB000DDD44 /* Encryption */,
 				8512419918794230000DDD44 /* COUtils.h */,
 				8512419A18794230000DDD44 /* COUtils.m */,
 			);
@@ -468,15 +463,6 @@
 			);
 			name = COBase;
 			path = COView;
-			sourceTree = "<group>";
-		};
-		8512416D187903EB000DDD44 /* Encryption */ = {
-			isa = PBXGroup;
-			children = (
-				8512416E187903EB000DDD44 /* Encryption.h */,
-				8512416F187903EB000DDD44 /* Encryption.m */,
-			);
-			path = Encryption;
 			sourceTree = "<group>";
 		};
 		8535AF68188FAE2700ED38EB /* COToolCateTest */ = {
@@ -683,7 +669,6 @@
 				8512418A187903EB000DDD44 /* COPhoneTool.m in Sources */,
 				85124187187903EB000DDD44 /* CODefineTool.m in Sources */,
 				8512418F187903EB000DDD44 /* COBaseV.m in Sources */,
-				85124191187903EB000DDD44 /* Encryption.m in Sources */,
 				851240FD18790365000DDD44 /* AppDelegate.m in Sources */,
 				85124177187903EB000DDD44 /* UIButton+CO.m in Sources */,
 				851240F918790365000DDD44 /* main.m in Sources */,
@@ -743,7 +728,6 @@
 				8535AFD8188FB64A00ED38EB /* COBaseDomain.m in Sources */,
 				8535AFD9188FB64A00ED38EB /* COBaseV.m in Sources */,
 				8535AFDA188FB64A00ED38EB /* COBaseVC.m in Sources */,
-				8535AFDB188FB64A00ED38EB /* Encryption.m in Sources */,
 				8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */,
 				8512411818790365000DDD44 /* COToolsSampleTests.m in Sources */,
 				8535AF6A188FAE5500ED38EB /* JsonParseTest.m in Sources */,

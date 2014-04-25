@@ -62,10 +62,18 @@
                     [COCommTool fillObject:domainObj withJSONDict:value];
                     [object setValue:domainObj forKey:key];
                 }
-            }else
-        if (value) {
-            [object setValue:value forKey:key];
-        }
+            }else{
+                if (!value) {
+                    SEL keySel = NSSelectorFromString([NSString stringWithFormat:@"%@Key",key]);
+                    if ([[object class] respondsToSelector:keySel]) {
+                        NSString *newKey = [[object class] performSelector:keySel];
+                        value = json[newKey];
+                    }
+                }
+                if (value) {
+                    [object setValue:value forKey:key];
+                }
+            }
     }
     free (properties);
 #pragma clang diagnostic pop

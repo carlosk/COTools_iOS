@@ -66,10 +66,19 @@
                     id domainObj = [[domainClass alloc] initWithJson:value];
                     [self setValue:domainObj forKey:key];
                 }
-            }else
+            }else{
+                if (!value) {
+                    SEL keySel = NSSelectorFromString([NSString stringWithFormat:@"%@Key",key]);
+                    if ([[self class] respondsToSelector:keySel]) {
+                        NSString *newKey = [[self class] performSelector:keySel];
+                        value = json[newKey];
+                    }
+                }
                 if (value) {
                     [self setValue:value forKey:key];
                 }
+            
+            }
     }
     free (properties);
 

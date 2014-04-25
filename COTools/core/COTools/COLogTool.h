@@ -10,8 +10,7 @@
 
 
 #ifdef DEBUG
-#   define CLog(s,...) NSLog(@"%@,%@,%d,%@", NSStringFromClass([self class]),NSStringFromSelector(_cmd),__LINE__,[NSString stringWithFormat:(s), ##__VA_ARGS__])
-#   define CLogb(s,...)NSLog(@"%@,%@,%d,%@", NSStringFromClass([bSelf class]),NSStringFromSelector(_cmd),__LINE__,[NSString stringWithFormat:(s), ##__VA_ARGS__])
+#   define CLog(s,...) NSLog(@"%@",[NSString stringWithFormat:(s), ##__VA_ARGS__])
 #   define ISDEBUG ISTest
 #else
 #   define ISDEBUG YES

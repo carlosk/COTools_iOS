@@ -33,13 +33,13 @@
 }
 
 - (void)testJsonParse{
-    NSString *jsonContent = @"{\"age\":12,\"name\":\"carlos\"}";
+    NSString *jsonContent = @"{\"age\":12,\"name\":\"carlos\",\"aaddress\":\"123\"}";
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonContent dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     User *user = [[User alloc]initWithJson:json];
 //    NSLog(@"user = %@",user);
     XCTAssertEqual(user.age, 12, @"int is not parse");
     XCTAssertEqualObjects(user.name, @"carlos", @"NSString is not parse");
-
+    XCTAssertEqualObjects(user.address, @"123", @"NSString is not empty");
 }
 
 
