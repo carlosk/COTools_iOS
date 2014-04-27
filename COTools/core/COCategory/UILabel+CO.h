@@ -13,7 +13,7 @@
 - (void)setAutoHeightWithContent;
 
 //根据内容和宽度获取高度
--(float )sizeWithContent;
++ (float )sizeWithContent:(NSString *)content withFont:(UIFont *)font withWidth:(float )width;
 
 /**
  *  设置自定义的字体名
