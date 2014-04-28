@@ -9,6 +9,7 @@
 #import "COParseTool.h"
 #import "COBaseDomain.h"
 #import "COLogTool.h"
+#import "NSData+CO.h"
 @implementation COParseTool
 +(NSArray *)parserData:(NSString *)jsonContent withClass:(Class)mClass withKey:(NSString *)key
 {
