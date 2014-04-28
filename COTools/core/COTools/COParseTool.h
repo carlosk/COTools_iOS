@@ -15,7 +15,7 @@
 //根据json字符串解析成对象
 +(id)parser:(NSString *)jsonContent withClass:(Class)mClass withKey:(NSString *)key;
 //通过key查找value
-+(NSString *)parseValueWith:(NSString *)jsonContent withKey:(NSString *)key;
++(id )parseValueWith:(NSString *)jsonContent withKey:(NSString *)key;
 
 //字典转换成json字符串
 +(NSString *)dictParseJsonContent:(NSDictionary *)dict;

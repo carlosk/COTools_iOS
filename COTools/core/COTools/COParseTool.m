@@ -46,7 +46,7 @@
 }
 
 //通过key查找value
-+(NSString *)parseValueWith:(NSString *)jsonContent withKey:(NSString *)key{
++(id )parseValueWith:(NSString *)jsonContent withKey:(NSString *)key{
     NSDictionary *json = [self jsonContentParseDict:jsonContent];
     if (json == nil) {
         CLog(@"json parse failed \r\n");
