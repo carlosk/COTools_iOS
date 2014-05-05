@@ -11,4 +11,6 @@
 @interface User : BaseUser
 @property(nonatomic,assign)int age;
 @property(nonatomic,strong)NSString  * address;
+@property(nonatomic,strong)NSDate  * createDate;
+@property(nonatomic,strong)NSArray *imageIds;
 @end

@@ -14,4 +14,13 @@
 + (NSString *)addressKey{
     return @"aaddress";
 }
+
++(NSDate *)createDateValue:(NSString *)createDate{
+    
+    return [NSDate date];
+}
+
+//+(Class )imageIdsChildClass{
+//    return [NSNumber class];
+//}
 @end

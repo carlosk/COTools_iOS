@@ -23,13 +23,6 @@ return __singleton__; \
 }
 
 @interface COCommTool : COBaseTool
-/**
- *  json字典填充一个Object对象
- *
- *  @param object 一般传入的为self
- *  @param json   json的字典
- */
-+ (void)fillObject:(id )object withJSONDict:(NSDictionary *)json;
 
 //根据key存入value
 +(void)saveValue:(id)value byKey:(NSString *)key;
