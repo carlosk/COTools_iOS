@@ -94,6 +94,7 @@
 		8535AFDA188FB64A00ED38EB /* COBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512416C187903EB000DDD44 /* COBaseVC.m */; };
 		8535AFDC188FB64A00ED38EB /* COUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512419A18794230000DDD44 /* COUtils.m */; };
 		8535AFDD188FB69800ED38EB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 8535AFB0188FB28A00ED38EB /* User.m */; };
+		8541129B1924866E006F94E9 /* Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541129A1924866E006F94E9 /* Identity.m */; };
 		8586BBAE19081DEE0036CCA8 /* BaseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8586BBAD19081DEE0036CCA8 /* BaseUser.m */; };
 		85A5986218D99FB600BF9365 /* COPListTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A5986118D99FB600BF9365 /* COPListTool.m */; };
 		85BF987A18C56B7700185684 /* Test01.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF987918C56B7700185684 /* Test01.m */; };
@@ -215,6 +216,8 @@
 		8535AFAF188FB28A00ED38EB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		8535AFB0188FB28A00ED38EB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		8535AFB2188FB38700ED38EB /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		854112991924866E006F94E9 /* Identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identity.h; sourceTree = "<group>"; };
+		8541129A1924866E006F94E9 /* Identity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Identity.m; sourceTree = "<group>"; };
 		8576B8296DEC4152969CA95C /* libPods-COToolsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COToolsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8586BBAC19081DEE0036CCA8 /* BaseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUser.h; sourceTree = "<group>"; };
 		8586BBAD19081DEE0036CCA8 /* BaseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUser.m; sourceTree = "<group>"; };
@@ -473,6 +476,8 @@
 				8535AFB0188FB28A00ED38EB /* User.m */,
 				8586BBAC19081DEE0036CCA8 /* BaseUser.h */,
 				8586BBAD19081DEE0036CCA8 /* BaseUser.m */,
+				854112991924866E006F94E9 /* Identity.h */,
+				8541129A1924866E006F94E9 /* Identity.m */,
 			);
 			path = COToolCateTest;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				8535AFC5188FB64A00ED38EB /* UILabel+CO.m in Sources */,
 				8535AFC6188FB64A00ED38EB /* UIScrollView+CO.m in Sources */,
 				8535AFC7188FB64A00ED38EB /* UITableView+CO.m in Sources */,
+				8541129B1924866E006F94E9 /* Identity.m in Sources */,
 				8535AFC8188FB64A00ED38EB /* UITextField+CO.m in Sources */,
 				8535AFC9188FB64A00ED38EB /* UITextView+CO.m in Sources */,
 				8535AFCA188FB64A00ED38EB /* UIView+CO.m in Sources */,

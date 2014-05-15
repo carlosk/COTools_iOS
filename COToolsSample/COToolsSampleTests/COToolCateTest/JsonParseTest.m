@@ -33,7 +33,7 @@
 }
 
 - (void)testJsonParse{
-    NSString *jsonContent = @"{\"age\":12,\"name\":\"carlos\",\"aaddress\":\"123\",\"createDate\":\"2014-10-10 12:23:32\",\"imageIds\":[1,2]}";
+    NSString *jsonContent = @"{\"identity\":\"\",\"age\":12,\"name\":\"carlos\",\"aaddress\":\"123\",\"createDate\":\"2014-10-10 12:23:32\",\"imageIds\":[1,2]}";
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[jsonContent dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
     User *user = [[User alloc]initWithJson:json];
 //    NSLog(@"user = %@",user);

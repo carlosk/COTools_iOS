@@ -23,4 +23,9 @@
 //+(Class )imageIdsChildClass{
 //    return [NSNumber class];
 //}
+
++(Class )identityClass
+{
+    return [Identity class];
+}
 @end

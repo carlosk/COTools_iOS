@@ -14,6 +14,7 @@
 /*属性名key 获取的是新的key.这是用来json的key跟字段名不一样的情况
  *属性名ChildClass 指的是是如果该属性是数组的话则用这个方法获取每个元素的class
  *属性名Class 指的是该属性如果是自定义对象的话,通过这个方法获取这个元素的class
+ *属性名Value 自定义解析规则,传入的是NSString或者number.然后自己解析..比如说性别,返回的是"M"或"F",自己可以改成YES or NO
  *如果数组里的内容是number,则不需要解析
  */
 -(id)initWithJson:(NSDictionary *)json{
@@ -102,7 +103,9 @@
                             value = newValue;
                         }
                     }
-                    [self setValue:value forKey:key];
+                    if (![@"" isEqualToString:value]) {
+                        [self setValue:value forKey:key];
+                    }
                 }
             
             }
