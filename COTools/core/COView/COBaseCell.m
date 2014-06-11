@@ -1,86 +1,168 @@
 //
-//  COBaseCell.m
-//  PocketWenzhou3
+//  TableViewDataHandler.m
+//  MyFamework
 //
-//  Created by carlos on 13-5-9.
-//  Copyright (c) 2013年 carlosk. All rights reserved.
-//
+//  Created by carlos on 13-9-5.
+//  Copyright (c) 2013年 carlos. All rights reserved.
+//封装了TableView的内容
 
+#import "TableViewDataHandler.h"
 #import "COBaseCell.h"
+@interface TableViewDataHandler()<UITableViewDataSource,UITableViewDelegate>
 
-@implementation COBaseCell
+@property(nonatomic,strong)NSMutableArray *items;
+@property(nonatomic,strong)NSMutableArray *sections;//章节,里面是array
+@property(nonatomic,copy)Class cellClass;
+@property(nonatomic,strong)UITableView  *mTableV;;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+@end
+
+@implementation TableViewDataHandler
+
+//根据setion初始化
+-(TableViewDataHandler *)initWithSetions:(NSMutableArray *)setions withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
+    self = [super init];
     if (self) {
-        // Initialization code
+        self.sections = setions;
+        self.tableViewDataHandlerFillCellBlock = tableViewDataHandlerFillCellBlock;
+        self.mTableV = tableV;
+        tableV.delegate = self;
+        tableV.dataSource= self;
+        self.cellClass = cellClass;
+        if ([cellClass isSubclassOfClass:[COBaseCell class]]) {
+            //            objc_msgSend(cellClass, @selector(registerCellNib:),tableV);
+            [_cellClass performSelector:@selector(registerCellNib:) withObject:tableV];
+        }
+        
+        //        objc_msgSend(_cellClass, @selector(getCellHeight:),nil);
+        
+    }
+    return self;
+    
+}
+
+//初始化
+-(TableViewDataHandler *)initWithItems:(NSMutableArray *)items withTableView:(UITableView *)tableV withTableViewDataHandlerFillCellBlock:(TableViewDataHandlerFillCellBlock) tableViewDataHandlerFillCellBlock withCOBaseCellClass:(Class )cellClass{
+    self = [super init];
+    if (self) {
+        self.items = items;
+        self.tableViewDataHandlerFillCellBlock = tableViewDataHandlerFillCellBlock;
+        self.mTableV = tableV;
+        tableV.delegate = self;
+        tableV.dataSource= self;
+        self.cellClass = cellClass;
+        if ([cellClass isSubclassOfClass:[COBaseCell class]]) {
+            //            objc_msgSend(cellClass, @selector(registerCellNib11:),self);
+            //            self performSelector:<#(SEL)#> withObject:<#(id)#>
+            [cellClass performSelector:@selector(registerCellNib:) withObject:tableV];
+        }
+        
+        //        objc_msgSend(_cellClass, @selector(getCellHeight:),nil);
+        
     }
     return self;
 }
 
--(IBAction)onClickWithXib:(UIView *)sender{
-    
-    if (![self onClick:sender]) {
-        // 如果为NO，则自行处理
-        
+
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.sections) {
+        NSArray *items = self.sections[indexPath.section];
+        return items[(NSUInteger) indexPath.row];
     }
+    
+    return self.items[(NSUInteger) indexPath.row];
 }
 
-//点击了某个按钮
--(BOOL)onClick:(UIView *)sender{
-    return NO;
+//重新刷新
+-(void)reloadItemsData:(NSMutableArray *)items{
+    self.items = items;
+    [self.mTableV reloadData];
 }
-//Cell的高度 子类必须要实现。Cell的高度要在cell类里调整
-+(NSNumber * )getCellHeight:(id)item withIndexPath:(NSIndexPath *)indexPath{
-    return [NSNumber numberWithFloat:10.0f];
-}
-//section底部的高度
-+(NSNumber * )heightForFooterInSection:(id)items withSection:(NSInteger)section{
-    return @0.f;
-}
-//setion的头部的高度
-+(NSNumber * )heightForHeaderInSection:(id)items withSection:(NSInteger)section{
-    return @0.f;
-}
-+(id)initCellWithTable:(UITableView *)tableView withCellClass:(Class )mClass{
-    
-    id cell = [tableView dequeueReusableCellWithIdentifier:[mClass description]];
-    if (nil == cell) {
-        cell = [[mClass alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[mClass description]];
+#pragma mark UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.sections) {
+        NSArray *items = self.sections[section];
+        return items.count;
     }
+    return self.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [_cellClass performSelector:@selector(initCellWithTable:)withObject:tableView];
+    cell.tag = indexPath.row;
+    
+    id item = self.items[indexPath.row];
+    if (self.sections) {
+        NSArray *items = self.sections[indexPath.section];
+        item = items[indexPath.row];
+    }
+    if (self.tableViewDataHandlerFillCellBlock) {
+        self.tableViewDataHandlerFillCellBlock(cell,item,indexPath);
+    }
+    [cell performSelector:@selector(fillData:withIndexPath:) withObject:item withObject:indexPath];
+    //    objc_msgSend(cell, @selector(fillData:withIndexPath:),item,indexPath);
     return cell;
 }
 
-+(id)initCellWithTable:(UITableView *)tableView{
-    
-    
-    return [self initCellWithTable:tableView withCellClass:[self class]];
-}
-
-+(void)registerCellNib:(UITableView *)mTableV{
-    UINib *nib = [UINib nibWithNibName:[[self class] description] bundle:nil];
-    if (nib) {
-        [mTableV registerNib:nib forCellReuseIdentifier:[[self class] description]];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    id item = self.items[indexPath.row];
+    if (self.tableViewDataHandlerClickIndexBlock) {
+        self.tableViewDataHandlerClickIndexBlock(indexPath,item);
     }
-    
 }
-- (void)awakeFromNib{
-    [super awakeFromNib];
-    [self createViews];
-    [self createData];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = 44.0f;
+    if ([self.cellClass isSubclassOfClass:[COBaseCell class]]) {
+        id item = self.items[indexPath.row];
+        if (self.sections) {
+            NSArray *items = self.sections[indexPath.section];
+            item = items[indexPath.row];
+        }
+        
+        
+        //        [_cellClass performSelector:@selector(getCellHeight:withIndexPath:) withObject:tableV];
+        NSNumber *height1 = [_cellClass performSelector:@selector(getCellHeight:withIndexPath:) withObject:item withObject:indexPath];
+        height = [height1 floatValue];
+    }
+    return height;
 }
 
-//创建View
--(void)createViews{
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    if (self.sections) {
+        return self.sections.count;
+    }
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    CGFloat height = 0.0f;
+    if (self.sections && [self.cellClass isSubclassOfClass:[COBaseCell class]]) {
+        NSArray *items = self.sections[section];
+        NSNumber *height1 =[_cellClass performSelector:@selector(heightForHeaderInSection:withSection:) withObject:items withObject:@(section)];
+        height = [height1 floatValue];
+    }
+    return height;
     
 }
-//创建Data数据
--(void)createData{
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    CGFloat height = 0.0f;
+    if (self.sections && [self.cellClass isSubclassOfClass:[COBaseCell class]]) {
+        NSArray *items = self.sections[section];
+        NSNumber *height1 =[_cellClass performSelector:@selector(heightForFooterInSection:withSection:) withObject:items withObject:@(section)];
+        height = [height1 floatValue];
+    }
+    return height;
 }
-//填充数据，这个是给子类实现的
--(void)fillData:(id)item withIndexPath:(NSIndexPath *)indexPath{
-    
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return [[UIView alloc]init];
+}// custom view for header. will be adjusted to default or specified header height
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [[UIView alloc]init];
 }
 @end
