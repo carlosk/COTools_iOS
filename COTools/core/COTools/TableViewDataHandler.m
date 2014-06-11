@@ -7,8 +7,6 @@
 //封装了TableView的内容
 
 #import "TableViewDataHandler.h"
-#import <objc/runtime.h>
-#import <objc/message.h>
 #import "COBaseCell.h"
 @interface TableViewDataHandler()<UITableViewDataSource,UITableViewDelegate>
 
@@ -32,7 +30,8 @@
         tableV.dataSource= self;
         self.cellClass = cellClass;
         if ([cellClass isSubclassOfClass:[COBaseCell class]]) {
-            objc_msgSend(cellClass, @selector(registerCellNib:),tableV);
+            //            objc_msgSend(cellClass, @selector(registerCellNib:),tableV);
+            [cellClass performSelector:@selector(registerCellNib:) withObject:tableV];
         }
         
         //        objc_msgSend(_cellClass, @selector(getCellHeight:),nil);
@@ -53,11 +52,12 @@
         tableV.dataSource= self;
         self.cellClass = cellClass;
         if ([cellClass isSubclassOfClass:[COBaseCell class]]) {
-            objc_msgSend(cellClass, @selector(registerCellNib:),tableV);
+            //            objc_msgSend(cellClass, @selector(registerCellNib:),tableV);
+            [cellClass performSelector:@selector(registerCellNib:) withObject:tableV];
         }
         
-//        objc_msgSend(_cellClass, @selector(getCellHeight:),nil);
-
+        //        objc_msgSend(_cellClass, @selector(getCellHeight:),nil);
+        
     }
     return self;
 }
@@ -69,7 +69,7 @@
         NSArray *items = self.sections[indexPath.section];
         return items[(NSUInteger) indexPath.row];
     }
-
+    
     return self.items[(NSUInteger) indexPath.row];
 }
 
@@ -91,7 +91,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = objc_msgSend(self.cellClass, @selector(initCellWithTable:),tableView);
+    UITableViewCell *cell = [_cellClass performSelector:@selector(initCellWithTable:) withObject:tableView];
+    //    UITableViewCell *cell = objc_msgSend(self.cellClass, @selector(initCellWithTable:),tableView);
     cell.tag = indexPath.row;
     id item = self.items[indexPath.row];
     if (self.sections) {
@@ -101,13 +102,14 @@
     if (self.tableViewDataHandlerFillCellBlock) {
         self.tableViewDataHandlerFillCellBlock(cell,item,indexPath);
     }
-    objc_msgSend(cell, @selector(fillData:withIndexPath:),item,indexPath);
+    [cell performSelector:@selector(fillData:withIndexPath:) withObject:item withObject:indexPath];
+    //    objc_msgSend(cell, @selector(fillData:withIndexPath:),item,indexPath);
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-        id item = self.items[indexPath.row];
+    id item = self.items[indexPath.row];
     if (self.tableViewDataHandlerClickIndexBlock) {
         self.tableViewDataHandlerClickIndexBlock(indexPath,item);
     }
@@ -120,8 +122,8 @@
             NSArray *items = self.sections[indexPath.section];
             item = items[indexPath.row];
         }
-        
-        NSNumber *height1 = objc_msgSend(_cellClass, @selector(getCellHeight:withIndexPath:),item,indexPath);
+        NSNumber *height1 = [ _cellClass performSelector:@selector(getCellHeight:withIndexPath:) withObject:item withObject:indexPath];
+        //        NSNumber *height1 = objc_msgSend(_cellClass, @selector(getCellHeight:withIndexPath:),item,indexPath);
         height = [height1 floatValue];
     }
     return height;
@@ -139,17 +141,19 @@
     CGFloat height = 0.0f;
     if (self.sections && [self.cellClass isSubclassOfClass:[COBaseCell class]]) {
         NSArray *items = self.sections[section];
-        NSNumber *height1 = objc_msgSend(_cellClass, @selector(heightForHeaderInSection:withSection:),items,section);
+        //        NSNumber *height1 = objc_msgSend(_cellClass, @selector(heightForHeaderInSection:withSection:),items,section);
+        NSNumber *height1 = [ _cellClass performSelector:@selector(heightForHeaderInSection:withSection:) withObject:items withObject:@(section)];
         height = [height1 floatValue];
     }
     return height;
-
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     CGFloat height = 0.0f;
     if (self.sections && [self.cellClass isSubclassOfClass:[COBaseCell class]]) {
         NSArray *items = self.sections[section];
-        NSNumber *height1 = objc_msgSend(_cellClass, @selector(heightForFooterInSection:withSection:),items,section);
+        //        NSNumber *height1 = objc_msgSend(_cellClass, @selector(heightForFooterInSection:withSection:),items,section);
+        NSNumber *height1 = [ _cellClass performSelector:@selector(heightForFooterInSection:withSection:) withObject:items withObject:@(section)];
         height = [height1 floatValue];
     }
     return height;
