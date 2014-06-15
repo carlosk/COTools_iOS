@@ -77,12 +77,22 @@ static NSString *myCustomFontName;
 + (float )sizeWithContent:(NSString *)content withFont:(UIFont *)font withWidth:(float )width{
     NSMutableDictionary *atts = [[NSMutableDictionary alloc] init];
     [atts setObject:font forKey:NSFontAttributeName];
-    
-    CGRect rect = [content boundingRectWithSize:CGSizeMake(width,100000)
-                                          options:NSStringDrawingUsesLineFragmentOrigin
-                                       attributes:atts
-                                          context:nil];
-    return rect.size.height;
+    CGFloat height = 0;
+    if (IOS7_OR_LATER) {
+        CGRect rect = [content boundingRectWithSize:CGSizeMake(width,100000)
+                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                         attributes:atts
+                                            context:nil];
+        height = rect.size.height;
+    } else {
+        CGSize theSize = [content sizeWithFont:font constrainedToSize:CGSizeMake(width,100000)];
+        height = theSize.height;
+    }
+    //    CGRect rect = [content boundingRectWithSize:CGSizeMake(width,100000)
+    //                                          options:NSStringDrawingUsesLineFragmentOrigin
+    //                                       attributes:atts
+    //                                          context:nil];
+    return height;
 }
 
 @end
