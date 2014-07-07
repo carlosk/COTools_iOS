@@ -36,6 +36,8 @@
 //根据日期获取年月日时分秒
 - (NSString *) converToStringWithFormat:(NSString *)format{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init] ;
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    [formatter setLocale:locale];
     [formatter setDateFormat:format];
     //    NSDate *date=[formatter dateFromString:mDateContent];
     return [formatter stringFromDate:self];;

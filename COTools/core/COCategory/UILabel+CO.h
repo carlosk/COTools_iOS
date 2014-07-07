@@ -21,4 +21,5 @@
  *  @param fontName
  */
 + (void)setCustomFontName:(NSString *)fontName;
+
 @end

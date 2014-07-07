@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad
 {
-    return;
        self.contentTF.delegate = self;
     self.contentTF.maxLength = 2;
 //    __block typeof(self)bSelf = self;

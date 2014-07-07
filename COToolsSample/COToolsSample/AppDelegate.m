@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSString *date = @"2014-06-19 16:08:48";
+    NSDate *date1 = [NSDate converToDate:date];
+    NSString *currentDateStr = [date1 converToStringWithFormat:@"dd/MM/yy h:mm a"];
     return YES;
 }
 							
