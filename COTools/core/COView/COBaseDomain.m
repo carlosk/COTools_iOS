@@ -44,6 +44,9 @@
         NSString *key = [NSString stringWithFormat:@"%s",property_getName(property)];
         id value = [json objectForKey:key];
         //如果不存在,则查看是否有新的key
+        if (value == [NSNull null]) {
+            value = nil;
+        }
         if (!value) {
             SEL newKeySEL = NSSelectorFromString([NSString stringWithFormat:@"%@Key",key]);
             if ([[self class] respondsToSelector:newKeySEL]) {
