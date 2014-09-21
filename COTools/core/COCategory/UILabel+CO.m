@@ -102,10 +102,10 @@ static NSString *myCustomFontName;
 //        CGSize theSize = [content sizeWithFont:font constrainedToSize:CGSizeMake(width,100000)];
 //        height = theSize.height;
 //    }
-    //    CGRect rect = [content boundingRectWithSize:CGSizeMake(width,100000)
-    //                                          options:NSStringDrawingUsesLineFragmentOrigin
-    //                                       attributes:atts
-    //                                          context:nil];
+//    CGRect rect = [content boundingRectWithSize:CGSizeMake(width,100000)
+//                                          options:NSStringDrawingUsesLineFragmentOrigin
+//                                       attributes:atts
+//                                          context:nil];
 //    return height;
 }
 
