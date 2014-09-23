@@ -190,4 +190,48 @@ static char addTagEvenBlockKey;
     self.backgroundColor = [UIColor clearColor];
 }
 
+//如果tag为-1或者0,则不选择
+-(void) fillSubViewsWithBlock:(void (^)(UIView *childV))block withTag:(NSInteger )tag{
+    if (!block) {
+        return;
+    }
+    for (UIView *eachV in self.subviews) {
+        if (eachV.tag == tag ) {
+            block(eachV);
+        }
+        [eachV fillSubViewsWithBlock:block withTag:tag];
+    }
+}
+
+
+//设置字体和颜色
+-(void)setFontAndColorWithFont:(UIFont *)font withColor:(UIColor *)color withTag:(int )tag{
+    
+    for (UIView *eachV in self.subviews) {
+        if (eachV.tag == tag) {
+            if ([eachV isKindOfClass:[UILabel class]]) {
+                UILabel *label = (UILabel *)eachV;
+                if (color)label.textColor = color;
+                if (font)label.font = font;
+            }else if ([eachV isKindOfClass:[UIButton class]]){
+                UIButton *btn = (UIButton *)eachV;
+                if(color)[btn setTitleColor:color forState:UIControlStateNormal];
+                if(font)btn.titleLabel.font = font;
+            }else if ([eachV isKindOfClass:[UITextField class]]){
+                UITextField *tf = (UITextField *)eachV;
+                if(font)tf.font = font;
+                if(color)tf.textColor = color;
+            }else if ([eachV isKindOfClass:[UITextView class]]){
+                UITextView *tv = (UITextView *)eachV;
+                if(font)tv.font = font;
+                if(color)tv.textColor = color;
+            }
+            
+        }
+        [self setFontAndColorWithFont:font withColor:color withTag:tag];
+    }
+    
+}
+
+
 @end

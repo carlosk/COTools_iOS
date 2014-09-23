@@ -31,6 +31,10 @@
 -(void) addTagEven:(SEL) mSel withTarget:(id)target;
 //添加view的tag事件到block上
 -(void) addTagEvenBlock:(void (^)(UIView *sender))block;
+//如果tag为-1或者0,则不选择
+-(void) fillSubViewsWithBlock:(void (^)(UIView *childV))block withTag:(NSInteger )tag;
+//设置字体和颜色
+-(void)setFontAndColorWithFont:(UIFont *)font withColor:(UIColor *)color withTag:(int )tag;
 //点击view的除了textview和textfiled的地方就隐藏
 - (void)hideKeyboardWithOutTapTextFiledAndTextView:(NSArray *)views;
 #pragma mark Frame
