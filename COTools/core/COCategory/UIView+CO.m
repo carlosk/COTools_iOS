@@ -12,14 +12,12 @@
 @implementation UIView (CO)
 //view转换成图片
 - (UIImage*)convertViewToImage{
-    UIGraphicsBeginImageContext(self.bounds.size);
     
+    CGSize size = self.bounds.size;
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
     UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
-    
     return image;
 }
 //根据Xib文件创建View
