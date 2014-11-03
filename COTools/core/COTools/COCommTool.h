@@ -31,4 +31,6 @@ return __singleton__; \
 
 //注册键盘的监听
 + (void)registerForKeyboardNotificationsWithScrollView:(UIScrollView *)scrllView withInputViews:(NSArray *)inputViews1;
+//获取当前设备所适配的laughimage
++(NSString *)getLauchImageForCurrentDevice;
 @end

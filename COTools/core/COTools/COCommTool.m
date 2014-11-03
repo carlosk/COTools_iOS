@@ -97,5 +97,19 @@ static CGSize kbSize;//这是键盘的显示出来的size
     [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 
-
+//获取当前设备所适配的laughimage
++(NSString *)getLauchImageForCurrentDevice{
+    NSString *suffix = nil;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        suffix = [[UIScreen mainScreen] bounds].size.height >= 568.0f ? @"-568h@2x" : @"@2x";
+    }
+    else {
+        UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+        suffix = UIInterfaceOrientationIsPortrait(orientation) ? @"-Portrait" : @"-Landscape";
+        suffix = [UIScreen mainScreen].scale == 2.0 ? [suffix stringByAppendingString:@"@2x~ipad"] : [suffix stringByAppendingString:@"~ipad"];
+    }
+    
+    NSString *launchImageName = [NSString stringWithFormat:@"LaunchImage-700%@.png",suffix];
+    return launchImageName;
+}
 @end
