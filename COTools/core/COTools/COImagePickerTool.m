@@ -24,19 +24,24 @@
     return tool;
     
 }
-//显示图片选择器 并用block返回结果
-+ (void)showImagePickerWithVC:(UIViewController *)vc WithType:(UIImagePickerControllerSourceType )sourceType withBlock:(BaseOnClickObject) block{
+
++ (void)showImagePickerWithVC:(UIViewController *)vc WithType:(UIImagePickerControllerSourceType )sourceType withBlock:(BaseOnClickObject) block withAllowsEditing:(BOOL)edit{
     COImagePickerTool *tool = [self single];
     tool.mBlock = block;
     
     UIImagePickerController *imagePicker = [[ UIImagePickerController alloc ] init ];
     imagePicker. sourceType = sourceType ;
-    imagePicker.allowsEditing = YES;
+    imagePicker.allowsEditing = edit;
     if (sourceType == UIImagePickerControllerSourceTypeCamera) {
         imagePicker.showsCameraControls = YES;
     }
     imagePicker. delegate = tool ;
     [vc presentViewController:imagePicker animated:YES completion:nil];
+    
+}
+//显示图片选择器 并用block返回结果
++ (void)showImagePickerWithVC:(UIViewController *)vc WithType:(UIImagePickerControllerSourceType )sourceType withBlock:(BaseOnClickObject) block{
+    [self showImagePickerWithVC:vc WithType:sourceType withBlock:block withAllowsEditing:YES];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image{
